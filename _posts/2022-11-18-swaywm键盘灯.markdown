@@ -1,0 +1,164 @@
+---
+layout: post
+title:  "swaywm usb键盘灯使用解决"
+date:   2022-11-18 18:45:20 +0800
+categories: jekyll update
+---
+
+# Table of Contents
+
+1.  [通过使用脚本](#org25370b2):凑合:
+2.  [修改wlroot](#orgd0349fd):极品:
+    1.  [使用gdb 调试进程](#orgf5d6bdf)
+
+ DONE 查找键盘灯相关内容并正常使用usb 键盘灯
+CLOSED: <span class="timestamp-wrapper"><span class="timestamp">[2022-11-19 六 13:14]</span></span>
+
+运行环境: archlinux wayland(swaywm).
+经过测试通过执行:
+
+    brightnessctl --device='input3::scrolllock' set 1
+
+但是 由于sway 的某些问题导致亮了之后直接关闭.
+经过查找issues 得到最终回答 [sway/issues/5342](https://github.com/swaywm/sway/issues/5342)
+
+`但是经过粗读 wlroot 只能解决灯不灭`
+
+<del>故而通过另一个issues [sway/issues/6987](https://github.com/swaywm/sway/issues/6987)</del>
+<del>获得了基于sway 1.7分支的 PR</del>.
+经过测试不符合预期效果
+
+于是接着修改wlroot.
+当修改wlroot 后,可以正常使用键盘灯.
+解决方案如下:
+
+
+<a id="org25370b2"></a>
+
+# DONE 通过使用脚本     :凑合:
+
+安装[python-libinput](https://gitlab.freedesktop.org/libevdev/python-libevdev/) 
+项目的examples/led-toggle.py ,实现了led 切换.
+通过以下patch:
+
+    diff --git a/examples/led-toggle.py b/examples/led-toggle.py
+    index da81f0f..db51a3a 100755
+    --- a/examples/led-toggle.py
+    +++ b/examples/led-toggle.py
+    @@ -2,7 +2,7 @@
+    
+     import libevdev
+     import sys
+    -
+    +import time
+    
+     def toggle(path, ledstr):
+         ledmap = {
+    @@ -31,18 +31,10 @@ def toggle(path, ledstr):
+             print('{} {}'.format(ledstr, 'on' if state else 'off'))
+    
+             while True:
+    -            for e in d.events():
+    -                if not e.matches(key):
+    -                    continue
+    -
+    -                if not e.value:
+    -                    continue
+    -
+    -                state = not state
+    -                d.set_leds([(led, state)])
+    -                print('{} {}'.format(ledstr, 'on' if state else 'off'))
+    -
+    -
+    +            state = 1
+    +            d.set_leds([(led, state)])
+    +            time.sleep(1)
+    +            
+     if __name__ == "__main__":
+         if len(sys.argv) < 3:
+             print("Usage: {} /dev/input/eventX {{numlock|capslock|scrolllock}}".format(sys.argv[0]))
+
+获得一个: 每输入一次按键便会闪烁一次的程序.
+如果要求不是很高 可以日常使用了
+
+
+<a id="orgd0349fd"></a>
+
+# DONE 修改wlroot     :极品:
+
+经过编译
+
+    git clone https://gitlab.freedesktop.org/wlroots/wlroots.git
+    git checkout 0.15.1
+    arch-meson -D examples=false build
+    ninja -C build/
+
+通过在keyboard<sub>led</sub><sub>update</sub>()中加入代码:
+leds |= 4;
+可以获得一个永远常亮,无法正常关闭的键盘 并不是很好用, 弃用.
+
+经过了粗读代码,发现可以通过:加一个变量(leds<sub>state</sub>)进行判定leds, 是否改变再执行刷新led.
+通过以下patch:
+
+    diff --git a/types/wlr_keyboard.c b/types/wlr_keyboard.c
+    index c54e33c..b941399 100644
+    --- a/types/wlr_keyboard.c
+    +++ b/types/wlr_keyboard.c
+    @@ -11,7 +11,7 @@
+     #include "util/array.h"
+     #include "util/shm.h"
+     #include "util/signal.h"
+    -
+    +uint32_t leds_state=0;
+     void keyboard_led_update(struct wlr_keyboard *keyboard) {
+            if (keyboard->xkb_state == NULL) {
+                    return;
+    @@ -24,6 +24,11 @@ void keyboard_led_update(struct wlr_keyboard *keyboard) {
+                            leds |= (1 << i);
+                    }
+            }
+    +
+    +	if (leds_state == leds) {
+    +		return;
+    +	}
+    +    leds_state = leds;
+            wlr_keyboard_led_update(keyboard, leds);
+     }
+
+通过git apply led.patch 应用补丁.
+将编译好的so 放入系统内:
+
+    #将so 脱光
+    strip build/libwlroots.so.10
+    #放入/usr/lib/ (如果你不知道是做什么,请不要随意操作)
+    sudo cp -i build/libwlroots.so.10  /usr/lib/libwlroots.so.10
+
+然后重新执行:sway 命令 进入sway.
+
+接下来就可以通过:
+
+    #开启 input 可以手动指定'*::scrollloc'代表所有键盘的"scrolllock led" 都会设置
+    brightnessctl --device='*::scrolllock' set 1
+    #关闭
+    brightnessctl --device='*::scrolllock' set 0
+
+在.config/sway/config 配置文件中加入键绑定:
+
+    bindsym $mod+F9 exec brightnessctl --device='*::scrolllock' set 1
+    bindsym $mod+F10 exec brightnessctl --device='*::scrolllock' set 0
+
+
+<a id="orgf5d6bdf"></a>
+
+## CANCELED 使用gdb 调试进程
+
+编译debug 代码
+参考链接:[gdb调试动态库(so)](https://blog.csdn.net/u012684933/article/details/44060769)
+
+    arch-meson --debug build
+    ninja -d stats -C build
+    #编译测试代码
+    gcc -g test.c  -o test.o ./build/libwlroots.so.10 -DWLR_USE_UNSTABLE -I  ./include/
+    #gdb 调试
+    LD_LIBRARY_PATH=./build/ gdb ./test.o
+
