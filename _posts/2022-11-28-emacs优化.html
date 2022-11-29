@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+<!-- 2022-11-29 二 19:17 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>[[https://xiliuya.github.io/][主页]]</title>
+<meta name="author" content="[[https://xiliuya.github.io/][xiliuya]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css"/>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title"><a href="https://xiliuya.github.io/">主页</a></h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>&#30446;&#24405;</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb534c9d">1. 配置emacs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">极品</span></span></a>
+<ul>
+<li><a href="#org3d8574c">1.1. <span class="done DONE">DONE</span> 在org-mode 查看插入的图片</a></li>
+<li><a href="#org9edadfa">1.2. <span class="done DONE">DONE</span> 使用org-mode 任务管理功能</a>
+<ul>
+<li><a href="#org503ccec">1.2.1. checkbox</a></li>
+</ul>
+</li>
+<li><a href="#org83621ad">1.3. <span class="done DONE">DONE</span> 配置yasnippet</a>
+<ul>
+<li><a href="#org974ea1b">1.3.1. 配置文件</a></li>
+<li><a href="#org53fdc2f">1.3.2. 新建一个模板.</a></li>
+<li><a href="#orge2b3b49">1.3.3. 复制模板</a></li>
+</ul>
+</li>
+<li><a href="#orga7f51cc">1.4. <span class="done DONE">DONE</span> 配置auto-insert模板</a></li>
+<li><a href="#org9b59238">1.5. <span class="done DONE">DONE</span> 配置org-mode 导出样式</a></li>
+<li><a href="#org8c5eafe">1.6. <span class="done DONE">DONE</span> 重新配置eglot</a></li>
+<li><a href="#org77c45e7">1.7. <span class="done DONE">DONE</span> 配置evil jk 返回正常模式</a>
+<ul>
+<li><a href="#org2267875">1.7.1. 安装 evil-escape</a></li>
+<li><a href="#org823d538">1.7.2. 配置 evil-escape</a></li>
+</ul>
+</li>
+<li><a href="#orgd1b3efc">1.8. <span class="done DONE">DONE</span> 配置优化</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb534c9d" class="outline-2">
+<h2 id="orgb534c9d"><span class="section-number-2">1.</span> 配置emacs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">极品</span></span></h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org3d8574c" class="outline-3">
+<h3 id="org3d8574c"><span class="section-number-3">1.1.</span> <span class="done DONE">DONE</span> 在org-mode 查看插入的图片</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+使用快捷键: <b>C-c C-x C-v</b> 
+或者执行: <b>M-x org-toggle-inline-images</b>
+</p>
+</div>
+</div>
+<div id="outline-container-org9edadfa" class="outline-3">
+<h3 id="org9edadfa"><span class="section-number-3">1.2.</span> <span class="done DONE">DONE</span> 使用org-mode 任务管理功能</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org503ccec" class="outline-4">
+<h4 id="org503ccec"><span class="section-number-4">1.2.1.</span> checkbox</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+参考链接: <a href="https://emacs.stackexchange.com/questions/5659/how-do-i-use-org-modes-checkboxes">org-mode checkbox</a>
+使用 <b>-</b>  + 等前缀 
+当标题输入完成后 
+创建复选框 <b>C-u C-c C-c</b> 
+切换状态  <b>C-c C-c</b> 
+在下一行新建复选框 <b>M-S-RET</b> 
+子框未选满会显示 [-] 
+示例如下: 
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org87f57ea"></a>购物清单<br />
+<div class="outline-text-5" id="text-1-2-1-1">
+<ul class="org-ul">
+<li class="trans"><code>[-]</code> 肉
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 猪肉</li>
+<li class="on"><code>[X]</code> 鱼头</li>
+</ul></li>
+<li class="on"><code>[X]</code> 米</li>
+<li class="off"><code>[&#xa0;]</code> 蛋</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org83621ad" class="outline-3">
+<h3 id="org83621ad"><span class="section-number-3">1.3.</span> <span class="done DONE">DONE</span> 配置yasnippet</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+yasnippt 是一个代码模板系统. 
+可以和eglot 配合使用. 
+配置好可以极大加快代码速度. 
+</p>
+</div>
+<div id="outline-container-org974ea1b" class="outline-4">
+<h4 id="org974ea1b"><span class="section-number-4">1.3.1.</span> 配置文件</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+可以参考链接: <a href="https://github.com/joaotavora/eglot">eglot github</a> . 
+在init-local.el 加入:
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #eaeaea;">(</span>add-hook <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">prog-mode-hook</span> <span style="color: #b9ca4a;">#'</span><span style="color: #7aa6da;">yas-minor-mode</span><span style="color: #eaeaea;">)</span>
+<span style="color: #eaeaea;">(</span><span style="color: #b9ca4a;">with-eval-after-load</span> <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">yasnippet</span>
+  <span style="color: #70c0b1;">(</span>yas-global-mode 1<span style="color: #70c0b1;">)</span><span style="color: #eaeaea;">)</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org53fdc2f" class="outline-4">
+<h4 id="org53fdc2f"><span class="section-number-4">1.3.2.</span> 新建一个模板.</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+通过 <b>M-x yas-new-snippet</b>
+例如在 c-mode 中建立了一个: 输入name 字符串后使用TAB 会变成It's xiliuya 的模板
+(仅限于输入非代码时)
+</p>
+<pre class="example" id="org20299a7">
+# -*- mode: snippet -*-
+# name:name
+# key:name
+# --
+It's xiliuya
+</pre>
+</div>
+</div>
+<div id="outline-container-orge2b3b49" class="outline-4">
+<h4 id="orge2b3b49"><span class="section-number-4">1.3.3.</span> 复制模板</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<p>
+将 github 上的模板文件夹: <b>snippets</b> 复制到 <b>~/.emacs.d/snippets/</b> . 
+模板链接 : <a href="https://github.com/yun63/emacs.d.git">yun63</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga7f51cc" class="outline-3">
+<h3 id="orga7f51cc"><span class="section-number-3">1.4.</span> <span class="done DONE">DONE</span> 配置auto-insert模板</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+参考链接: <a href="https://github.com/lujun9972/emacs-document/blob/master/emacs-common/%E8%AE%A9Emacs%E4%B8%BA%E4%BD%A0%E8%87%AA%E5%8A%A8%E6%8F%92%E5%85%A5%E5%86%85%E5%AE%B9(Emacs%E6%A8%A1%E6%9D%BF%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97).org">Emacs 模板</a>
+经过对比发现emacswiki 较为清晰易于使用
+链接: <a href="https://www.emacswiki.org/emacs/AutoInsertMode">autoinsert emacswiki</a>
+使用github 上找到的模板:
+模板链接: <a href="https://github.com/jaypei/exz-conf/tree/master/emacsconf/emacs.d/templates">jaypei/exz-conf</a>
+通过在 <i>init-local.el</i> 加入:
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #969896; font-style: italic;">;;; </span><span style="color: #969896; font-style: italic;">&#20351;&#29992;auto-insert</span>
+<span style="color: #eaeaea;">(</span>add-hook <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">find-file-hook</span> <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">auto-insert</span><span style="color: #eaeaea;">)</span>
+<span style="color: #eaeaea;">(</span>add-hook <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">find-file-hook</span> <span style="color: #b9ca4a;">#'</span><span style="color: #7aa6da;">yas-minor-mode</span><span style="color: #eaeaea;">)</span>
+<span style="color: #eaeaea;">(</span><span style="color: #b9ca4a;">setq</span> user-full-name <span style="color: #70c0b1;">"xiliuya"</span><span style="color: #eaeaea;">)</span>
+<span style="color: #969896; font-style: italic;">;;; </span><span style="color: #969896; font-style: italic;">(auto-insert-mode 1)</span>
+<span style="color: #eaeaea;">(</span><span style="color: #b9ca4a;">defun</span> <span style="color: #e78c45;">my/autoinsert-yas-expand</span><span style="color: #70c0b1;">()</span>
+  <span style="color: #c397d8;">"Replace text in yasnippet template."</span>
+  <span style="color: #70c0b1;">(</span>yas-expand-snippet <span style="color: #e7c547;">(</span>buffer-string<span style="color: #e7c547;">)</span> <span style="color: #e7c547;">(</span>point-min<span style="color: #e7c547;">)</span> <span style="color: #e7c547;">(</span>point-max<span style="color: #e7c547;">)</span><span style="color: #70c0b1;">)</span><span style="color: #eaeaea;">)</span>
+<span style="color: #eaeaea;">(</span>custom-set-variables
+ <span style="color: #b9ca4a;">'</span><span style="color: #70c0b1;">(</span>auto-insert <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">other</span><span style="color: #70c0b1;">)</span>
+ <span style="color: #b9ca4a;">'</span><span style="color: #70c0b1;">(</span>auto-insert-directory <span style="color: #70c0b1;">"~/.emacs.d/templates/"</span><span style="color: #70c0b1;">)</span>
+ <span style="color: #b9ca4a;">'</span><span style="color: #70c0b1;">(</span>auto-insert-alist <span style="color: #b9ca4a;">'</span><span style="color: #e7c547;">(</span>
+                       <span style="color: #b9ca4a;">(</span><span style="color: #7aa6da;">(</span><span style="color: #70c0b1;">"</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">.</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #c397d8;">(</span><span style="color: #70c0b1;">[Hh]</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #c397d8;">|</span><span style="color: #70c0b1;">hh</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #c397d8;">|</span><span style="color: #70c0b1;">hpp</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #c397d8;">)</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">'"</span>
+                         . <span style="color: #70c0b1;">"C / C++ header"</span><span style="color: #7aa6da;">)</span>
+                        . <span style="color: #7aa6da;">[</span><span style="color: #70c0b1;">"template.h"</span> c++-mode my/autoinsert-yas-expand<span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">)</span>
+                       <span style="color: #b9ca4a;">(</span><span style="color: #7aa6da;">(</span><span style="color: #70c0b1;">"</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">.</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #c397d8;">(</span><span style="color: #70c0b1;">[cC]</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #c397d8;">|</span><span style="color: #70c0b1;">cc</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #c397d8;">|</span><span style="color: #70c0b1;">cpp</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #c397d8;">)</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">'"</span>
+                         . <span style="color: #70c0b1;">"C++ source"</span><span style="color: #7aa6da;">)</span>
+                        . <span style="color: #7aa6da;">[</span><span style="color: #70c0b1;">"template.c"</span> my/autoinsert-yas-expand<span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">)</span>
+                       <span style="color: #b9ca4a;">(</span><span style="color: #7aa6da;">(</span><span style="color: #70c0b1;">"</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">.rs</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">'"</span>
+                         . <span style="color: #70c0b1;">"Rust source"</span><span style="color: #7aa6da;">)</span>
+                        . <span style="color: #7aa6da;">[</span><span style="color: #70c0b1;">"template.rs"</span> my/autoinsert-yas-expand<span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">)</span>
+                       <span style="color: #b9ca4a;">(</span><span style="color: #7aa6da;">(</span><span style="color: #70c0b1;">"</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">.sh</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">'"</span>
+                         . <span style="color: #70c0b1;">"Shell script"</span><span style="color: #7aa6da;">)</span>
+                        . <span style="color: #7aa6da;">[</span><span style="color: #70c0b1;">"template.sh"</span> my/autoinsert-yas-expand<span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">)</span>
+                       <span style="color: #b9ca4a;">(</span><span style="color: #7aa6da;">(</span><span style="color: #70c0b1;">"</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">.el</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">'"</span> . <span style="color: #70c0b1;">"Emacs Lisp"</span><span style="color: #7aa6da;">)</span>
+                        . <span style="color: #7aa6da;">[</span><span style="color: #70c0b1;">"template.el"</span> my/autoinsert-yas-expand<span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">)</span>
+                       <span style="color: #b9ca4a;">(</span><span style="color: #7aa6da;">(</span><span style="color: #70c0b1;">"</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">.pl</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">'"</span>
+                         . <span style="color: #70c0b1;">"Perl script"</span><span style="color: #7aa6da;">)</span>
+                        . <span style="color: #7aa6da;">[</span><span style="color: #70c0b1;">"template.pl"</span> my/autoinsert-yas-expand<span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">)</span>
+                       <span style="color: #b9ca4a;">(</span><span style="color: #7aa6da;">(</span><span style="color: #70c0b1;">"</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">.pm</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">'"</span>
+                         . <span style="color: #70c0b1;">"Perl module"</span><span style="color: #7aa6da;">)</span>
+                        . <span style="color: #7aa6da;">[</span><span style="color: #70c0b1;">"template.pm"</span> my/autoinsert-yas-expand<span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">)</span>
+                       <span style="color: #b9ca4a;">(</span><span style="color: #7aa6da;">(</span><span style="color: #70c0b1;">"</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">.py</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">'"</span>
+                         . <span style="color: #70c0b1;">"Python script"</span><span style="color: #7aa6da;">)</span>
+                        . <span style="color: #7aa6da;">[</span><span style="color: #70c0b1;">"template.py"</span> my/autoinsert-yas-expand<span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">)</span>
+                       <span style="color: #b9ca4a;">(</span><span style="color: #7aa6da;">(</span><span style="color: #70c0b1;">"</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">.go</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">'"</span>
+                         . <span style="color: #70c0b1;">"Go source"</span><span style="color: #7aa6da;">)</span>
+                        . <span style="color: #7aa6da;">[</span><span style="color: #70c0b1;">"template.go"</span> my/autoinsert-yas-expand<span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">)</span>
+                       <span style="color: #b9ca4a;">(</span><span style="color: #7aa6da;">(</span><span style="color: #70c0b1;">"[mM]akefile</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">'"</span>
+                         . <span style="color: #70c0b1;">"Makefile"</span><span style="color: #7aa6da;">)</span>
+                        . <span style="color: #7aa6da;">[</span><span style="color: #70c0b1;">"Makefile"</span> my/autoinsert-yas-expand<span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">)</span>
+                       <span style="color: #b9ca4a;">(</span><span style="color: #7aa6da;">(</span><span style="color: #70c0b1;">"</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">.tex</span><span style="color: #e7c547;">\</span><span style="color: #c397d8;">\</span><span style="color: #70c0b1;">'"</span>
+                         . <span style="color: #70c0b1;">"TeX/LaTeX"</span><span style="color: #7aa6da;">)</span>
+                        . <span style="color: #7aa6da;">[</span><span style="color: #70c0b1;">"template.tex"</span> my/autoinsert-yas-expand<span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">)</span><span style="color: #e7c547;">)</span><span style="color: #70c0b1;">)</span><span style="color: #eaeaea;">)</span>
+</pre>
+</div>
+<p>
+<del>由于 purcell 配置里go 并没有默认配置 所以go 的模板配置不生效</del>
+通过加入 <code>(add-hook 'find-file-hook #'yas-minor-mode)</code> 解决
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b59238" class="outline-3">
+<h3 id="org9b59238"><span class="section-number-3">1.5.</span> <span class="done DONE">DONE</span> 配置org-mode 导出样式</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+org-mode 导出markdown 格式,
+再通过jekyll 转换为html 静态页面的过程过于繁琐.
+而且效果并不美观.
+故而直接使用org 配置css导出html .
+</p>
+
+<p>
+参考链接: <a href="https://emacs-china.org/t/org-html/1919">emacs-china</a>
+官方手册相关页: <a href="https://orgmode.org/org.html#Quoting-HTML-tags">org-mode</a>
+</p>
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #b9ca4a;">#+TITLE:</span> <span style="color: #e78c45; font-size: 140%; font-weight: bold;"><a href="https://xiliuya.github.io/">&#20027;&#39029;</a></span>
+<span style="color: #969896; font-style: italic;">#+HTML_HEAD: &lt;link rel="stylesheet" type="text/css" href="<a href="http://gongzhitaao.org/orgcss/org.css&quot;/">http://gongzhitaao.org/orgcss/org.css"/</a>&gt;</span>
+</pre>
+</div>
+
+<p>
+建立yasnippet模板:
+</p>
+<pre class="example" id="org8604fca">
+# -*- mode: snippet -*-
+# name: css for html export
+# key: css
+# --
+#+TITLE: ${1:`(file-name-base buffer-file-name)`}
+#+OPTIONS: toc:nil num:3 H:4 ^:nil pri:t
+#+HTML_HEAD: &lt;link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css"/&gt;
+
+$0
+</pre>
+</div>
+</div>
+<div id="outline-container-org8c5eafe" class="outline-3">
+<h3 id="org8c5eafe"><span class="section-number-3">1.6.</span> <span class="done DONE">DONE</span> 重新配置eglot</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+删除旧配置
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #eaeaea;">(</span>add-hook <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">prog-mode-hook</span> <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">eglot-ensure</span><span style="color: #eaeaea;">)</span>
+</pre>
+</div>
+<p>
+eglot 依赖外部的lsp server,
+所以手动配置add-hook 模式比较合适
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #eaeaea;">(</span>add-hook <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">python-mode-hook</span> <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">eglot-ensure</span><span style="color: #eaeaea;">)</span>
+<span style="color: #eaeaea;">(</span>add-hook <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">c-mode-common-hook</span> <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">eglot-ensure</span><span style="color: #eaeaea;">)</span>
+<span style="color: #eaeaea;">(</span>add-hook <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">rust-mode-hook</span> <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">eglot-ensure</span><span style="color: #eaeaea;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org77c45e7" class="outline-3">
+<h3 id="org77c45e7"><span class="section-number-3">1.7.</span> <span class="done DONE">DONE</span> 配置evil jk 返回正常模式</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+vi/ vim/ evil 自带快捷键: <b>C-[</b> . 
+可以从 <b>插入模式</b> 切换回 <b>正常模式</b> . 
+但是有些不便. 
+简单的配置键绑定:
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #eaeaea;">(</span>local-set-key <span style="color: #70c0b1;">(</span>kbd <span style="color: #70c0b1;">"jk"</span><span style="color: #70c0b1;">)</span> <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">evil-normal-state</span><span style="color: #eaeaea;">)</span><span style="color: #d54e53;">)</span>
+</pre>
+</div>
+<p>
+可以在当前buffer 执行 <b>C-x C-e</b> 后使用. 
+但无法在add-hook 中使用,而global-set-key 不支持(kbd "jk"). 
+通过论坛, 查找到了方案: <a href="https://emacs-china.org/t/evil-evil-escape-god-mode-evil-god-state/18132">emacs-china</a>. 
+可以用 evil-escape 插件实现. 
+</p>
+</div>
+<div id="outline-container-org2267875" class="outline-4">
+<h4 id="org2267875"><span class="section-number-4">1.7.1.</span> 安装 evil-escape</h4>
+<div class="outline-text-4" id="text-1-7-1">
+<pre class="example">
+M-x package-install RET evil-escape RET
+</pre>
+</div>
+</div>
+<div id="outline-container-org823d538" class="outline-4">
+<h4 id="org823d538"><span class="section-number-4">1.7.2.</span> 配置 evil-escape</h4>
+<div class="outline-text-4" id="text-1-7-2">
+<p>
+加入配置:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #eaeaea;">(</span><span style="color: #b9ca4a;">with-eval-after-load</span> <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">evil</span>
+  <span style="color: #70c0b1;">(</span>evil-escape-mode<span style="color: #70c0b1;">)</span><span style="color: #eaeaea;">)</span>
+<span style="color: #eaeaea;">(</span><span style="color: #b9ca4a;">setq-default</span> evil-escape-key-sequence <span style="color: #70c0b1;">"jk"</span><span style="color: #eaeaea;">)</span>
+<span style="color: #eaeaea;">(</span><span style="color: #b9ca4a;">setq-default</span> evil-escape-delay 0.2<span style="color: #eaeaea;">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd1b3efc" class="outline-3">
+<h3 id="orgd1b3efc"><span class="section-number-3">1.8.</span> <span class="done DONE">DONE</span> 配置优化</h3>
+<div class="outline-text-3" id="text-1-8">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 加入代码新建模
+<ul class="org-ul">
+<li class="on"><code>[X]</code> c</li>
+<li class="on"><code>[X]</code> python</li>
+<li class="on"><code>[X]</code> rust</li>
+<li class="on"><code>[X]</code> elisp</li>
+</ul></li>
+<li class="on"><code>[X]</code> org-mode 导出到jekyll
+<ul class="org-ul">
+<li class="on"><code>[X]</code> html 美化</li>
+<li class="on"><code>[X]</code> 加入主页超链接头</li>
+</ul></li>
+<li class="on"><code>[X]</code> 使用yasnippet 模板
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 了解新建模板过程</li>
+<li class="on"><code>[X]</code> 建立一个org 下css 模板</li>
+<li class="on"><code>[X]</code> 使用github 配置</li>
+</ul></li>
+<li class="on"><code>[X]</code> 重新配置eglot
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 解决eglot 打开el 报错</li>
+<li class="on"><code>[X]</code> 配置 eglot hook
+<ul class="org-ul">
+<li class="on"><code>[X]</code> python</li>
+<li class="on"><code>[X]</code> c/c++</li>
+<li class="on"><code>[X]</code> rust</li>
+</ul></li>
+</ul></li>
+<li class="on"><code>[X]</code> 配置 evil
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 安装 evil-escape</li>
+<li class="on"><code>[X]</code> 配置 evil-escape</li>
+</ul></li>
+</ul>
+<p>
+<del>- [ ] md 自动导出 jekyll头</del>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">&#20316;&#32773;: <a href="https://xiliuya.github.io/">xiliuya</a></p>
+<p class="date">Created: 2022-11-29 二 19:17</p>
+</div>
+</body>
+</html>
