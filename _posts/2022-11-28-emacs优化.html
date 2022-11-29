@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
 <head>
-<!-- 2022-11-29 二 19:17 -->
+<!-- 2022-11-29 二 19:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>[[https://xiliuya.github.io/][主页]]</title>
@@ -193,7 +193,7 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css"/>
+<link rel="stylesheet" type="text/css" href="/assets/org.css"/>
 </head>
 <body>
 <div id="content" class="content">
@@ -202,42 +202,42 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgb534c9d">1. 配置emacs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">极品</span></span></a>
+<li><a href="#org43fdc6c">1. 配置emacs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">极品</span></span></a>
 <ul>
-<li><a href="#org3d8574c">1.1. <span class="done DONE">DONE</span> 在org-mode 查看插入的图片</a></li>
-<li><a href="#org9edadfa">1.2. <span class="done DONE">DONE</span> 使用org-mode 任务管理功能</a>
+<li><a href="#org07af510">1.1. <span class="done DONE">DONE</span> 在org-mode 查看插入的图片</a></li>
+<li><a href="#org6401348">1.2. <span class="done DONE">DONE</span> 使用org-mode 任务管理功能</a>
 <ul>
-<li><a href="#org503ccec">1.2.1. checkbox</a></li>
+<li><a href="#orgaab86ea">1.2.1. checkbox</a></li>
 </ul>
 </li>
-<li><a href="#org83621ad">1.3. <span class="done DONE">DONE</span> 配置yasnippet</a>
+<li><a href="#org8574cf2">1.3. <span class="done DONE">DONE</span> 配置yasnippet</a>
 <ul>
-<li><a href="#org974ea1b">1.3.1. 配置文件</a></li>
-<li><a href="#org53fdc2f">1.3.2. 新建一个模板.</a></li>
-<li><a href="#orge2b3b49">1.3.3. 复制模板</a></li>
+<li><a href="#org4ba0908">1.3.1. 配置文件</a></li>
+<li><a href="#org63f80e0">1.3.2. 新建一个模板.</a></li>
+<li><a href="#org9119719">1.3.3. 复制模板</a></li>
 </ul>
 </li>
-<li><a href="#orga7f51cc">1.4. <span class="done DONE">DONE</span> 配置auto-insert模板</a></li>
-<li><a href="#org9b59238">1.5. <span class="done DONE">DONE</span> 配置org-mode 导出样式</a></li>
-<li><a href="#org8c5eafe">1.6. <span class="done DONE">DONE</span> 重新配置eglot</a></li>
-<li><a href="#org77c45e7">1.7. <span class="done DONE">DONE</span> 配置evil jk 返回正常模式</a>
+<li><a href="#orgab4322f">1.4. <span class="done DONE">DONE</span> 配置auto-insert模板</a></li>
+<li><a href="#org70efc34">1.5. <span class="done DONE">DONE</span> 配置org-mode 导出样式</a></li>
+<li><a href="#org44ac963">1.6. <span class="done DONE">DONE</span> 重新配置eglot</a></li>
+<li><a href="#org6d8deb0">1.7. <span class="done DONE">DONE</span> 配置evil jk 返回正常模式</a>
 <ul>
-<li><a href="#org2267875">1.7.1. 安装 evil-escape</a></li>
-<li><a href="#org823d538">1.7.2. 配置 evil-escape</a></li>
+<li><a href="#org5c5c7c6">1.7.1. 安装 evil-escape</a></li>
+<li><a href="#org2401a4a">1.7.2. 配置 evil-escape</a></li>
 </ul>
 </li>
-<li><a href="#orgd1b3efc">1.8. <span class="done DONE">DONE</span> 配置优化</a></li>
+<li><a href="#org1f95fcc">1.8. <span class="done DONE">DONE</span> 配置优化</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb534c9d" class="outline-2">
-<h2 id="orgb534c9d"><span class="section-number-2">1.</span> 配置emacs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">极品</span></span></h2>
+<div id="outline-container-org43fdc6c" class="outline-2">
+<h2 id="org43fdc6c"><span class="section-number-2">1.</span> 配置emacs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">极品</span></span></h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org3d8574c" class="outline-3">
-<h3 id="org3d8574c"><span class="section-number-3">1.1.</span> <span class="done DONE">DONE</span> 在org-mode 查看插入的图片</h3>
+<div id="outline-container-org07af510" class="outline-3">
+<h3 id="org07af510"><span class="section-number-3">1.1.</span> <span class="done DONE">DONE</span> 在org-mode 查看插入的图片</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 使用快捷键: <b>C-c C-x C-v</b> 
@@ -245,12 +245,12 @@
 </p>
 </div>
 </div>
-<div id="outline-container-org9edadfa" class="outline-3">
-<h3 id="org9edadfa"><span class="section-number-3">1.2.</span> <span class="done DONE">DONE</span> 使用org-mode 任务管理功能</h3>
+<div id="outline-container-org6401348" class="outline-3">
+<h3 id="org6401348"><span class="section-number-3">1.2.</span> <span class="done DONE">DONE</span> 使用org-mode 任务管理功能</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-org503ccec" class="outline-4">
-<h4 id="org503ccec"><span class="section-number-4">1.2.1.</span> checkbox</h4>
+<div id="outline-container-orgaab86ea" class="outline-4">
+<h4 id="orgaab86ea"><span class="section-number-4">1.2.1.</span> checkbox</h4>
 <div class="outline-text-4" id="text-1-2-1">
 <p>
 参考链接: <a href="https://emacs.stackexchange.com/questions/5659/how-do-i-use-org-modes-checkboxes">org-mode checkbox</a>
@@ -264,7 +264,7 @@
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="org87f57ea"></a>购物清单<br />
+<li><a id="org4e4ed1a"></a>购物清单<br />
 <div class="outline-text-5" id="text-1-2-1-1">
 <ul class="org-ul">
 <li class="trans"><code>[-]</code> 肉
@@ -280,8 +280,8 @@
 </ol>
 </div>
 </div>
-<div id="outline-container-org83621ad" class="outline-3">
-<h3 id="org83621ad"><span class="section-number-3">1.3.</span> <span class="done DONE">DONE</span> 配置yasnippet</h3>
+<div id="outline-container-org8574cf2" class="outline-3">
+<h3 id="org8574cf2"><span class="section-number-3">1.3.</span> <span class="done DONE">DONE</span> 配置yasnippet</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 yasnippt 是一个代码模板系统. 
@@ -289,8 +289,8 @@ yasnippt 是一个代码模板系统.
 配置好可以极大加快代码速度. 
 </p>
 </div>
-<div id="outline-container-org974ea1b" class="outline-4">
-<h4 id="org974ea1b"><span class="section-number-4">1.3.1.</span> 配置文件</h4>
+<div id="outline-container-org4ba0908" class="outline-4">
+<h4 id="org4ba0908"><span class="section-number-4">1.3.1.</span> 配置文件</h4>
 <div class="outline-text-4" id="text-1-3-1">
 <p>
 可以参考链接: <a href="https://github.com/joaotavora/eglot">eglot github</a> . 
@@ -304,15 +304,15 @@ yasnippt 是一个代码模板系统.
 </div>
 </div>
 </div>
-<div id="outline-container-org53fdc2f" class="outline-4">
-<h4 id="org53fdc2f"><span class="section-number-4">1.3.2.</span> 新建一个模板.</h4>
+<div id="outline-container-org63f80e0" class="outline-4">
+<h4 id="org63f80e0"><span class="section-number-4">1.3.2.</span> 新建一个模板.</h4>
 <div class="outline-text-4" id="text-1-3-2">
 <p>
 通过 <b>M-x yas-new-snippet</b>
 例如在 c-mode 中建立了一个: 输入name 字符串后使用TAB 会变成It's xiliuya 的模板
 (仅限于输入非代码时)
 </p>
-<pre class="example" id="org20299a7">
+<pre class="example" id="org978e5e7">
 # -*- mode: snippet -*-
 # name:name
 # key:name
@@ -321,8 +321,8 @@ It's xiliuya
 </pre>
 </div>
 </div>
-<div id="outline-container-orge2b3b49" class="outline-4">
-<h4 id="orge2b3b49"><span class="section-number-4">1.3.3.</span> 复制模板</h4>
+<div id="outline-container-org9119719" class="outline-4">
+<h4 id="org9119719"><span class="section-number-4">1.3.3.</span> 复制模板</h4>
 <div class="outline-text-4" id="text-1-3-3">
 <p>
 将 github 上的模板文件夹: <b>snippets</b> 复制到 <b>~/.emacs.d/snippets/</b> . 
@@ -331,8 +331,8 @@ It's xiliuya
 </div>
 </div>
 </div>
-<div id="outline-container-orga7f51cc" class="outline-3">
-<h3 id="orga7f51cc"><span class="section-number-3">1.4.</span> <span class="done DONE">DONE</span> 配置auto-insert模板</h3>
+<div id="outline-container-orgab4322f" class="outline-3">
+<h3 id="orgab4322f"><span class="section-number-3">1.4.</span> <span class="done DONE">DONE</span> 配置auto-insert模板</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 参考链接: <a href="https://github.com/lujun9972/emacs-document/blob/master/emacs-common/%E8%AE%A9Emacs%E4%B8%BA%E4%BD%A0%E8%87%AA%E5%8A%A8%E6%8F%92%E5%85%A5%E5%86%85%E5%AE%B9(Emacs%E6%A8%A1%E6%9D%BF%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97).org">Emacs 模板</a>
@@ -396,8 +396,8 @@ It's xiliuya
 </div>
 </div>
 
-<div id="outline-container-org9b59238" class="outline-3">
-<h3 id="org9b59238"><span class="section-number-3">1.5.</span> <span class="done DONE">DONE</span> 配置org-mode 导出样式</h3>
+<div id="outline-container-org70efc34" class="outline-3">
+<h3 id="org70efc34"><span class="section-number-3">1.5.</span> <span class="done DONE">DONE</span> 配置org-mode 导出样式</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 org-mode 导出markdown 格式,
@@ -419,7 +419,7 @@ org-mode 导出markdown 格式,
 <p>
 建立yasnippet模板:
 </p>
-<pre class="example" id="org8604fca">
+<pre class="example" id="orgc31cad4">
 # -*- mode: snippet -*-
 # name: css for html export
 # key: css
@@ -432,8 +432,8 @@ $0
 </pre>
 </div>
 </div>
-<div id="outline-container-org8c5eafe" class="outline-3">
-<h3 id="org8c5eafe"><span class="section-number-3">1.6.</span> <span class="done DONE">DONE</span> 重新配置eglot</h3>
+<div id="outline-container-org44ac963" class="outline-3">
+<h3 id="org44ac963"><span class="section-number-3">1.6.</span> <span class="done DONE">DONE</span> 重新配置eglot</h3>
 <div class="outline-text-3" id="text-1-6">
 <p>
 删除旧配置
@@ -455,8 +455,8 @@ eglot 依赖外部的lsp server,
 </div>
 </div>
 
-<div id="outline-container-org77c45e7" class="outline-3">
-<h3 id="org77c45e7"><span class="section-number-3">1.7.</span> <span class="done DONE">DONE</span> 配置evil jk 返回正常模式</h3>
+<div id="outline-container-org6d8deb0" class="outline-3">
+<h3 id="org6d8deb0"><span class="section-number-3">1.7.</span> <span class="done DONE">DONE</span> 配置evil jk 返回正常模式</h3>
 <div class="outline-text-3" id="text-1-7">
 <p>
 vi/ vim/ evil 自带快捷键: <b>C-[</b> . 
@@ -475,16 +475,16 @@ vi/ vim/ evil 自带快捷键: <b>C-[</b> .
 可以用 evil-escape 插件实现. 
 </p>
 </div>
-<div id="outline-container-org2267875" class="outline-4">
-<h4 id="org2267875"><span class="section-number-4">1.7.1.</span> 安装 evil-escape</h4>
+<div id="outline-container-org5c5c7c6" class="outline-4">
+<h4 id="org5c5c7c6"><span class="section-number-4">1.7.1.</span> 安装 evil-escape</h4>
 <div class="outline-text-4" id="text-1-7-1">
 <pre class="example">
 M-x package-install RET evil-escape RET
 </pre>
 </div>
 </div>
-<div id="outline-container-org823d538" class="outline-4">
-<h4 id="org823d538"><span class="section-number-4">1.7.2.</span> 配置 evil-escape</h4>
+<div id="outline-container-org2401a4a" class="outline-4">
+<h4 id="org2401a4a"><span class="section-number-4">1.7.2.</span> 配置 evil-escape</h4>
 <div class="outline-text-4" id="text-1-7-2">
 <p>
 加入配置:
@@ -500,8 +500,8 @@ M-x package-install RET evil-escape RET
 </div>
 </div>
 
-<div id="outline-container-orgd1b3efc" class="outline-3">
-<h3 id="orgd1b3efc"><span class="section-number-3">1.8.</span> <span class="done DONE">DONE</span> 配置优化</h3>
+<div id="outline-container-org1f95fcc" class="outline-3">
+<h3 id="org1f95fcc"><span class="section-number-3">1.8.</span> <span class="done DONE">DONE</span> 配置优化</h3>
 <div class="outline-text-3" id="text-1-8">
 <ul class="org-ul">
 <li class="on"><code>[X]</code> 加入代码新建模
@@ -547,7 +547,7 @@ M-x package-install RET evil-escape RET
 </div>
 <div id="postamble" class="status">
 <p class="author">&#20316;&#32773;: <a href="https://xiliuya.github.io/">xiliuya</a></p>
-<p class="date">Created: 2022-11-29 二 19:17</p>
+<p class="date">Created: 2022-11-29 二 19:36</p>
 </div>
 </body>
 </html>
