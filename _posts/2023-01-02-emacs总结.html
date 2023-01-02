@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
 <head>
-<!-- 2023-01-02 一 20:39 -->
+<!-- 2023-01-02 一 22:43 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>emacs 配置总结</title>
@@ -202,207 +202,167 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org3e75274">1. org-mode</a>
+<li><a href="#org799a0bd">1. emacs</a>
 <ul>
-<li>
+<li><a href="#org3c7f428">1.1. org-mode</a>
 <ul>
-<li><a href="#org56f594b">1.0.1. 配置 org-protocol</a>
+<li><a href="#org89c466f">1.1.1. 配置 org-protocol</a>
 <ul>
-<li><a href="#org9305b13">配置 linux xdg</a></li>
+<li><a href="#orgd3dc5b9">配置 linux xdg</a></li>
 </ul>
 </li>
-<li><a href="#orgf578b1a">1.0.2. 配置org 导出makedown</a></li>
-<li><a href="#org3415c8c">1.0.3. 配置 org-roam 日志模板</a>
+<li><a href="#orge21ccea">1.1.2. 配置org 导出makedown</a></li>
+<li><a href="#org6337403">1.1.3. 配置 org-roam 日志模板</a>
 <ul>
-<li><a href="#orgee9d179">配合 yas 使用模板</a></li>
+<li><a href="#orged138b9">配合 yas 使用模板</a></li>
 </ul>
 </li>
-<li><a href="#org92cb4e4">1.0.4. 配置 org-roam 关联笔记</a>
+<li><a href="#orgc70b1b1">1.1.4. 配置 org-roam 关联笔记</a>
 <ul>
-<li><a href="#orgd6f5033">基本使用</a></li>
-<li><a href="#orgfdd2144">功能理解</a></li>
+<li><a href="#org0a79415">基本使用</a></li>
+<li><a href="#org3967083">功能理解</a></li>
 </ul>
 </li>
-<li><a href="#orga1ee80c">1.0.5. org-roam 添加快捷键</a></li>
-<li><a href="#org492d7a9">1.0.6. 配置 org-modern-mode</a></li>
-<li><a href="#org1ae730d">1.0.7. 配置org-mode 导出样式</a></li>
-<li><a href="#org195d38a">1.0.8. 配置 org-mode 导出头</a></li>
-<li><a href="#orgfa2df60">1.0.9. 配置 emacs org-download</a></li>
-<li><a href="#org7c07478">1.0.10. 配置 mpv 插件</a></li>
-<li><a href="#orgb9565f0">1.0.11. 配置 org-mpv-notes</a>
+<li><a href="#org4319bb7">1.1.5. org-roam 添加快捷键</a></li>
+<li><a href="#org05f5e5d">1.1.6. 配置 org-modern-mode</a></li>
+<li><a href="#orga79f7e4">1.1.7. 配置org-mode 导出样式</a></li>
+<li><a href="#orge4315b1">1.1.8. 配置 org-mode 导出头</a></li>
+<li><a href="#org0cbf03c">1.1.9. 配置 emacs org-download</a></li>
+<li><a href="#org350e1c5">1.1.10. 配置 mpv 插件</a></li>
+<li><a href="#org2b6edd8">1.1.11. 配置 org-mpv-notes</a>
 <ul>
-<li><a href="#org22bacb3">mpv</a></li>
-<li><a href="#org530df3a">开启会自动打开 mpv</a></li>
+<li><a href="#org9133ea1">mpv</a></li>
+<li><a href="#org7b0cc9d">开启会自动打开 mpv</a></li>
 </ul>
 </li>
-<li><a href="#org25fe3ed">1.0.12. 配置 org 使用 prose-mode</a></li>
-<li><a href="#org5e81eea">1.0.13. 配置 org 任务管理颜色</a></li>
-<li><a href="#org67a7978">1.0.14. 配置 org-transclusion</a></li>
-<li><a href="#org0be7eb7">1.0.15. 使用 org-transclusion</a>
+<li><a href="#orgc412962">1.1.12. 配置 org 使用 prose-mode</a></li>
+<li><a href="#orgabcecc9">1.1.13. 配置 org 任务管理颜色</a></li>
+<li><a href="#orgc7cf936">1.1.14. 配置 org-transclusion</a></li>
+<li><a href="#org241d547">1.1.15. 使用 org-transclusion</a>
 <ul>
-<li><a href="#org83c929c">链接头</a></li>
-<li><a href="#org37a8462">基本操作</a></li>
+<li><a href="#org7dea2a9">链接头</a></li>
+<li><a href="#orgb8be6b9">基本操作</a></li>
 </ul>
 </li>
-<li><a href="#org83a0b9e">1.0.16. 转换 org-roam 链接为 org-transclude 嵌入块</a></li>
-<li><a href="#org258be05">1.0.17. org-mode 中文表格显示优化</a></li>
+<li><a href="#orgc7ffd68">1.1.16. 转换 org-roam 链接为 org-transclude 嵌入块</a></li>
+<li><a href="#org9931155">1.1.17. org-mode 中文表格显示优化</a></li>
 </ul>
 </li>
+<li><a href="#org478bae0">1.2. evil</a>
+<ul>
+<li><a href="#org076e87d">1.2.1. 配置evil jk 返回正常模式</a>
+<ul>
+<li><a href="#org8d15469">安装 evil-escape</a></li>
+<li><a href="#orgfa4b67a">配置 evil-escape</a></li>
 </ul>
 </li>
-<li><a href="#org4f5fd50">2. evil</a>
-<ul>
-<li>
-<ul>
-<li><a href="#org43d08a3">2.0.1. 配置evil jk 返回正常模式</a>
-<ul>
-<li><a href="#org3a5f4dd">安装 evil-escape</a></li>
-<li><a href="#orga15d614">配置 evil-escape</a></li>
+<li><a href="#orgc708744">1.2.2. 配置evil 正常模式下 org TAB</a></li>
+<li><a href="#orgcbb24ba">1.2.3. 配置 evil 插入模式快捷键</a></li>
+<li><a href="#org2456588">1.2.4. 配置 evil-ex 自定义 cmd</a></li>
 </ul>
 </li>
-<li><a href="#orgb90f0e6">2.0.2. 配置evil 正常模式下 org TAB</a></li>
-<li><a href="#orga09dd8f">2.0.3. 配置 evil 插入模式快捷键</a></li>
-<li><a href="#org2061110">2.0.4. 配置 evil-ex 自定义 cmd</a></li>
+<li><a href="#orgce90de3">1.3. auto-insert</a>
+<ul>
+<li><a href="#orgee61b0f">1.3.1. 配置auto-insert模板</a></li>
+<li><a href="#org8bdd638">1.3.2. 优化 auto-insert</a></li>
 </ul>
 </li>
+<li><a href="#org5791af1">1.4. yasnippet</a>
+<ul>
+<li><a href="#org2f11502">1.4.1. 配置yasnippet</a>
+<ul>
+<li><a href="#org5adb0e8">配置文件</a></li>
+<li><a href="#orgb1ca670">新建一个模板.</a></li>
+<li><a href="#org847420a">复制模板</a></li>
 </ul>
 </li>
-<li><a href="#org936cdd3">3. auto-insert</a>
+<li><a href="#org2d9acb5">1.4.2. yas 快捷添加 org-src 代码块</a></li>
+<li><a href="#orgde7d3a2">1.4.3. 调整 yasnippet 模板</a></li>
+<li><a href="#orgad67e9e">1.4.4. 修复 prog-mode 下 yas 功能</a>
 <ul>
-<li>
-<ul>
-<li><a href="#org78f130b">3.0.1. 配置auto-insert模板</a></li>
-<li><a href="#org915dab5">3.0.2. 优化 auto-insert</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orgb2f351b">4. yasnippet</a>
-<ul>
-<li>
-<ul>
-<li><a href="#orgebe0f39">4.0.1. 配置yasnippet</a>
-<ul>
-<li><a href="#org5e108e5">配置文件</a></li>
-<li><a href="#org2fcc1d8">新建一个模板.</a></li>
-<li><a href="#orgda45dd1">复制模板</a></li>
-</ul>
-</li>
-<li><a href="#org7a1056a">4.0.2. yas 快捷添加 org-src 代码块</a></li>
-<li><a href="#org676d170">4.0.3. 调整 yasnippet 模板</a></li>
-<li><a href="#org5c25e8c">4.0.4. 修复 prog-mode 下 yas 功能</a>
-<ul>
-<li><a href="#org400443c">解决方案</a></li>
+<li><a href="#org7f821fe">解决方案</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><a href="#org2317b00">1.5. eglot</a>
+<ul>
+<li><a href="#org7d5d2be">1.5.1. 将 eglot 加入配置使其打开c文件后启动</a></li>
+<li><a href="#org9c1f415">1.5.2. 查看使用eglot</a></li>
+<li><a href="#org89c3f75">1.5.3. 重新配置eglot</a></li>
+<li><a href="#org8a58975">1.5.4. 当打开el 文件后eglot 报错</a></li>
+<li><a href="#orga2022a1">1.5.5. 配置 eglot 快捷键</a></li>
 </ul>
 </li>
-<li><a href="#org0415212">5. eglot</a>
+<li><a href="#orgfd3a012">1.6. erc</a>
 <ul>
-<li>
-<ul>
-<li><a href="#org71b8a3e">5.0.1. 将 eglot 加入配置使其打开c文件后启动</a></li>
-<li><a href="#org069e2cf">5.0.2. 查看使用eglot</a></li>
-<li><a href="#orgde9e6c4">5.0.3. 重新配置eglot</a></li>
-<li><a href="#org0ca1c63">5.0.4. 当打开el 文件后eglot 报错</a></li>
-<li><a href="#orgbbecdee">5.0.5. 配置 eglot 快捷键</a></li>
+<li><a href="#org71e21c3">1.6.1. 配置 erc 使用</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#orga0e984d">6. erc</a>
+<li><a href="#orgabc3072">1.7. sdcv</a>
 <ul>
-<li>
+<li><a href="#org4458146">1.7.1. 配置 espeak 朗读</a>
 <ul>
-<li><a href="#org45c4634">6.0.1. 配置 erc 使用</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org0aa67ec">7. sdcv</a>
-<ul>
-<li>
-<ul>
-<li><a href="#orga6a5c1d">7.0.1. 配置 espeak 朗读</a>
-<ul>
-<li><a href="#orgf0ddb91">修改配置</a></li>
-<li><a href="#org46d3b3c">实际分析</a></li>
+<li><a href="#orgbd52f1a">修改配置</a></li>
+<li><a href="#orgafbb397">实际分析</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><a href="#orgaeff2e1">1.8. pyim</a>
+<ul>
+<li><a href="#org610008b">1.8.1. 使用pyim 并体验</a></li>
+<li><a href="#org9799915">1.8.2. 修改 pyim 的选词框</a></li>
+<li><a href="#org1b35bdc">1.8.3. 修复 pyim 在 prog-mode 下的bug</a></li>
 </ul>
 </li>
-<li><a href="#orge18c0de">8. pyim</a>
+<li><a href="#org7658174">1.9. EAF</a>
 <ul>
-<li>
-<ul>
-<li><a href="#org63baaa4">8.0.1. 使用pyim 并体验</a></li>
-<li><a href="#orgda1db11">8.0.2. 修改 pyim 的选词框</a></li>
-<li><a href="#orgd332431">8.0.3. 修复 pyim 在 prog-mode 下的bug</a></li>
+<li><a href="#orgd06d8d1">1.9.1. CANCELED 尝试使用 EAF</a></li>
 </ul>
 </li>
+<li><a href="#org7c57baa">1.10. 优化</a>
+<ul>
+<li><a href="#org51e7431">1.10.1. CANCELED 优化 emacs 启动时间</a>
+<ul>
+<li><a href="#org3afde77">查看 <code>benchmarking</code> 信息</a></li>
+<li><a href="#orgaae0346">问题</a></li>
+<li><a href="#orgce72347">优化</a></li>
 </ul>
 </li>
-<li><a href="#orgb114bb0">9. EAF</a>
+<li><a href="#org904270d">1.10.2. 配置 emacs 窗口录制 GIF</a>
 <ul>
-<li>
-<ul>
-<li><a href="#orga32477d">9.0.1. CANCELED 尝试使用 EAF</a></li>
+<li><a href="#orgde34049">添加 shell 脚本</a></li>
+<li><a href="#orge6d784b">配置快捷键</a></li>
 </ul>
 </li>
+<li><a href="#orge13a553">1.10.3. 尝试其他 gif 方案</a>
+<ul>
+<li><a href="#org0484a0f">使用截图脚本截取</a></li>
+<li><a href="#org3bd2d7f">使用录制屏幕截取</a></li>
 </ul>
 </li>
-<li><a href="#orga35bddf">10. 优化</a>
+<li><a href="#orga22eb07">1.10.4. 配置 编译命令</a>
 <ul>
-<li>
-<ul>
-<li><a href="#orgdbdf719">10.0.1. CANCELED 优化 emacs 启动时间</a>
-<ul>
-<li><a href="#org349c2e7">查看 <code>benchmarking</code> 信息</a></li>
-<li><a href="#orgdedf9d8">问题</a></li>
-<li><a href="#org0b98e97">优化</a></li>
+<li><a href="#org0cd499b">配置编译成功后,隐藏弹窗:</a></li>
+<li><a href="#org0c152b3">配置 c-mode 编译命令</a></li>
 </ul>
 </li>
-<li><a href="#org8060b56">10.0.2. 配置 emacs 窗口录制 GIF</a>
-<ul>
-<li><a href="#org6c629b7">添加 shell 脚本</a></li>
-<li><a href="#org0d484bb">配置快捷键</a></li>
+<li><a href="#org6e7218c">1.10.5. 将 buffer 内容复制到缓存buffer内</a></li>
 </ul>
 </li>
-<li><a href="#orgc4adb12">10.0.3. 尝试其他 gif 方案</a>
+<li><a href="#org2ce56cb">1.11. 修复</a>
 <ul>
-<li><a href="#org93dd82c">使用截图脚本截取</a></li>
-<li><a href="#orgd8c166e">使用录制屏幕截取</a></li>
+<li><a href="#org0a324ce">1.11.1. 修复 flyspell-mode 报错 Can’t find Hunspell dictionary</a></li>
+<li><a href="#org2bc2623">1.11.2. 修复 org 模式下的代码执行</a></li>
+<li><a href="#org12ec72f">1.11.3. 修复 org-mode 以外的 evil-tab</a></li>
+<li><a href="#org8cdabdf">1.11.4. 修复 prog-mode 下 yas 功能</a>
+<ul>
+<li><a href="#org835894b">解决方案</a></li>
 </ul>
 </li>
-<li><a href="#org2fd7132">10.0.4. 配置 编译命令</a>
-<ul>
-<li><a href="#org1852834">配置编译成功后,隐藏弹窗:</a></li>
-<li><a href="#org1c7220c">配置 c-mode 编译命令</a></li>
-</ul>
-</li>
-<li><a href="#orgc79fea4">10.0.5. 将 buffer 内容复制到缓存buffer内</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orgd3cfe2f">11. 修复</a>
-<ul>
-<li>
-<ul>
-<li><a href="#org49e47af">11.0.1. 修复 flyspell-mode 报错 Can’t find Hunspell dictionary</a></li>
-<li><a href="#orgbf7b671">11.0.2. 修复 org 模式下的代码执行</a></li>
-<li><a href="#org550eb7e">11.0.3. 修复 org-mode 以外的 evil-tab</a></li>
-<li><a href="#orgcb5527d">11.0.4. 修复 prog-mode 下 yas 功能</a>
-<ul>
-<li><a href="#orgc2f59d0">解决方案</a></li>
-</ul>
-</li>
-<li><a href="#orgb4324a8">11.0.5. 修复 org-transclusion 报错 No content found with "id:</a></li>
-<li><a href="#org044b8e2">11.0.6. 修复 pyim 在 prog-mode 下的bug</a></li>
+<li><a href="#org4b99cff">1.11.5. 修复 org-transclusion 报错 No content found with "id:</a></li>
+<li><a href="#orgcb6e6cb">1.11.6. 修复 pyim 在 prog-mode 下的bug</a></li>
 </ul>
 </li>
 </ul>
@@ -410,13 +370,17 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org3e75274" class="outline-2">
-<h2 id="org3e75274"><span class="section-number-2">1.</span> org-mode</h2>
+<div id="outline-container-org799a0bd" class="outline-2">
+<h2 id="org799a0bd"><span class="section-number-2">1.</span> emacs</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org56f594b" class="outline-4">
-<h4 id="org56f594b"><span class="section-number-4">1.0.1.</span> 配置 org-protocol</h4>
-<div class="outline-text-4" id="text-1-0-1">
+<div id="outline-container-org3c7f428" class="outline-3">
+<h3 id="org3c7f428"><span class="section-number-3">1.1.</span> org-mode</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org89c466f" class="outline-4">
+<h4 id="org89c466f"><span class="section-number-4">1.1.1.</span> 配置 org-protocol</h4>
+<div class="outline-text-4" id="text-1-1-1">
 <p>
 org-protocol 可以捕获外部程序的内容, 如浏览器的数据可以发送至 org-roam
 配置文件:
@@ -426,12 +390,13 @@ org-protocol 可以捕获外部程序的内容, 如浏览器的数据可以发�
 </pre>
 </div>
 </div>
-<div id="outline-container-org9305b13" class="outline-5">
-<h5 id="org9305b13">配置 linux xdg</h5>
-<div class="outline-text-5" id="text-org9305b13">
+<div id="outline-container-orgd3dc5b9" class="outline-5">
+<h5 id="orgd3dc5b9">配置 linux xdg</h5>
+<div class="outline-text-5" id="text-orgd3dc5b9">
 <p>
 建立 <code>~/.local/share/applications/org-protocol.desktop</code> :
-#+begin_example
+</p>
+<pre class="example" id="org5cd1475">
 [Desktop Entry]
 Name=Org-Protocol
 Exec=emacsclient %u
@@ -439,7 +404,8 @@ Icon=emacs-icon
 Type=Application
 Terminal=false
 MimeType=x-scheme-handler/org-protocol
-#+end_example&gt;
+</pre>
+<p>
 配置 xdg-mime
 </p>
 <div class="org-src-container">
@@ -458,25 +424,25 @@ MimeType=x-scheme-handler/org-protocol
 </div>
 
 
-<div id="outline-container-orgf578b1a" class="outline-4">
-<h4 id="orgf578b1a"><span class="section-number-4">1.0.2.</span> 配置org 导出makedown</h4>
-<div class="outline-text-4" id="text-1-0-2">
+<div id="outline-container-orge21ccea" class="outline-4">
+<h4 id="orge21ccea"><span class="section-number-4">1.1.2.</span> 配置org 导出makedown</h4>
+<div class="outline-text-4" id="text-1-1-2">
 <p>
 参考链接:<a href="https://www.jianshu.com/p/768a0548cb60">org 导出md</a>
 在init-local.el 内添加:
 </p>
 <div class="org-src-container">
 <pre class="src src-lisp"><span style="color: #eaeaea;">(</span><span style="color: #b9ca4a;">with-eval-after-load</span> 'org
-  <span style="color: #70c0b1;">(</span>add-to-list 'org-export-backends 'md<span style="color: #70c0b1;">)</span><span style="color: #eaeaea;">)</span>
+<span style="color: #70c0b1;">(</span>add-to-list 'org-export-backends 'md<span style="color: #70c0b1;">)</span><span style="color: #eaeaea;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-org3415c8c" class="outline-4">
-<h4 id="org3415c8c"><span class="section-number-4">1.0.3.</span> 配置 org-roam 日志模板</h4>
-<div class="outline-text-4" id="text-1-0-3">
+<div id="outline-container-org6337403" class="outline-4">
+<h4 id="org6337403"><span class="section-number-4">1.1.3.</span> 配置 org-roam 日志模板</h4>
+<div class="outline-text-4" id="text-1-1-3">
 <p>
 添加配置:
 </p>
@@ -491,9 +457,9 @@ MimeType=x-scheme-handler/org-protocol
 </pre>
 </div>
 </div>
-<div id="outline-container-orgee9d179" class="outline-5">
-<h5 id="orgee9d179">配合 yas 使用模板</h5>
-<div class="outline-text-5" id="text-orgee9d179">
+<div id="outline-container-orged138b9" class="outline-5">
+<h5 id="orged138b9">配合 yas 使用模板</h5>
+<div class="outline-text-5" id="text-orged138b9">
 <p>
 新建了一个 tem 模板, 可以直接将内容补全
 </p>
@@ -518,9 +484,9 @@ $<span style="color: #e7c547;">0</span>
 </div>
 
 
-<div id="outline-container-org92cb4e4" class="outline-4">
-<h4 id="org92cb4e4"><span class="section-number-4">1.0.4.</span> 配置 org-roam 关联笔记</h4>
-<div class="outline-text-4" id="text-1-0-4">
+<div id="outline-container-orgc70b1b1" class="outline-4">
+<h4 id="orgc70b1b1"><span class="section-number-4">1.1.4.</span> 配置 org-roam 关联笔记</h4>
+<div class="outline-text-4" id="text-1-1-4">
 <p>
 相关链接: <a href="https://www.zmonster.me/2020/06/27/org-roam-introduction.html">org-roam 配置</a>
 经过翻阅官方的文档进行以下配置, 加入 <code>init-local.el</code> :
@@ -555,9 +521,9 @@ $<span style="color: #e7c547;">0</span>
 </pre>
 </div>
 </div>
-<div id="outline-container-orgd6f5033" class="outline-5">
-<h5 id="orgd6f5033">基本使用</h5>
-<div class="outline-text-5" id="text-orgd6f5033">
+<div id="outline-container-org0a79415" class="outline-5">
+<h5 id="org0a79415">基本使用</h5>
+<div class="outline-text-5" id="text-org0a79415">
 <p>
 通过 <code>M-x org-id-get-create</code> 给现有的小标题生成一个 node id. 
 通过 <code>M-x org-roam-db-sync</code> 刷新数据库. 
@@ -565,9 +531,9 @@ $<span style="color: #e7c547;">0</span>
 </p>
 </div>
 </div>
-<div id="outline-container-orgfdd2144" class="outline-5">
-<h5 id="orgfdd2144">功能理解</h5>
-<div class="outline-text-5" id="text-orgfdd2144">
+<div id="outline-container-org3967083" class="outline-5">
+<h5 id="org3967083">功能理解</h5>
+<div class="outline-text-5" id="text-org3967083">
 <p>
 一款酷炫的插件, 可以简单而美观的管理众多的笔记. 
 基于 <code>org-mode</code> 简化新建日志的步骤. 
@@ -580,9 +546,9 @@ $<span style="color: #e7c547;">0</span>
 </div>
 
 
-<div id="outline-container-orga1ee80c" class="outline-4">
-<h4 id="orga1ee80c"><span class="section-number-4">1.0.5.</span> org-roam 添加快捷键</h4>
-<div class="outline-text-4" id="text-1-0-5">
+<div id="outline-container-org4319bb7" class="outline-4">
+<h4 id="org4319bb7"><span class="section-number-4">1.1.5.</span> org-roam 添加快捷键</h4>
+<div class="outline-text-4" id="text-1-1-5">
 <p>
 原先已配置了相关快捷键,
 现在多加几个, 需要的键绑定
@@ -597,9 +563,9 @@ $<span style="color: #e7c547;">0</span>
 </div>
 
 
-<div id="outline-container-org492d7a9" class="outline-4">
-<h4 id="org492d7a9"><span class="section-number-4">1.0.6.</span> 配置 org-modern-mode</h4>
-<div class="outline-text-4" id="text-1-0-6">
+<div id="outline-container-org05f5e5d" class="outline-4">
+<h4 id="org05f5e5d"><span class="section-number-4">1.1.6.</span> 配置 org-modern-mode</h4>
+<div class="outline-text-4" id="text-1-1-6">
 <p>
 org-modern 是一个 org-mode 美化插件
 通过在配置文件加入:
@@ -613,9 +579,9 @@ org-modern 是一个 org-mode 美化插件
 </div>
 
 
-<div id="outline-container-org1ae730d" class="outline-4">
-<h4 id="org1ae730d"><span class="section-number-4">1.0.7.</span> 配置org-mode 导出样式</h4>
-<div class="outline-text-4" id="text-1-0-7">
+<div id="outline-container-orga79f7e4" class="outline-4">
+<h4 id="orga79f7e4"><span class="section-number-4">1.1.7.</span> 配置org-mode 导出样式</h4>
+<div class="outline-text-4" id="text-1-1-7">
 <p>
 org-mode 导出markdown 格式,
 再通过jekyll 转换为html 静态页面的过程过于繁琐.
@@ -636,7 +602,7 @@ org-mode 导出markdown 格式,
 <p>
 建立yasnippet模板:
 </p>
-<pre class="example" id="org4d67f3b">
+<pre class="example" id="org7254f56">
 # -*- mode: snippet -*-
 # name: css for html export
 # key: css
@@ -651,9 +617,9 @@ $0
 </div>
 
 
-<div id="outline-container-org195d38a" class="outline-4">
-<h4 id="org195d38a"><span class="section-number-4">1.0.8.</span> 配置 org-mode 导出头</h4>
-<div class="outline-text-4" id="text-1-0-8">
+<div id="outline-container-orge4315b1" class="outline-4">
+<h4 id="orge4315b1"><span class="section-number-4">1.1.8.</span> 配置 org-mode 导出头</h4>
+<div class="outline-text-4" id="text-1-1-8">
 <p>
 加入配置:
 </p>
@@ -669,9 +635,9 @@ $0
 </div>
 
 
-<div id="outline-container-orgfa2df60" class="outline-4">
-<h4 id="orgfa2df60"><span class="section-number-4">1.0.9.</span> 配置 emacs org-download</h4>
-<div class="outline-text-4" id="text-1-0-9">
+<div id="outline-container-org0cbf03c" class="outline-4">
+<h4 id="org0cbf03c"><span class="section-number-4">1.1.9.</span> 配置 emacs org-download</h4>
+<div class="outline-text-4" id="text-1-1-9">
 <p>
 参考文档: <a href="https://hsingko.github.io/post/2021/12/23/org-download/">org-mode 中愉快地嵌入图片</a>
 参考大佬配置: <a href="https://emacs-china.org/t/org-download/1672/7?u=xiliuya">tumashu</a>
@@ -708,9 +674,9 @@ $0
 
 
 
-<div id="outline-container-org7c07478" class="outline-4">
-<h4 id="org7c07478"><span class="section-number-4">1.0.10.</span> 配置 mpv 插件</h4>
-<div class="outline-text-4" id="text-1-0-10">
+<div id="outline-container-org350e1c5" class="outline-4">
+<h4 id="org350e1c5"><span class="section-number-4">1.1.10.</span> 配置 mpv 插件</h4>
+<div class="outline-text-4" id="text-1-1-10">
 <p>
 是一个 nognu 的包
 可以在 emacs 调用命令
@@ -720,9 +686,9 @@ $0
 </div>
 
 
-<div id="outline-container-orgb9565f0" class="outline-4">
-<h4 id="orgb9565f0"><span class="section-number-4">1.0.11.</span> 配置 org-mpv-notes</h4>
-<div class="outline-text-4" id="text-1-0-11">
+<div id="outline-container-org2b6edd8" class="outline-4">
+<h4 id="org2b6edd8"><span class="section-number-4">1.1.11.</span> 配置 org-mpv-notes</h4>
+<div class="outline-text-4" id="text-1-1-11">
 <p>
 安装后无需配置直接可以通过插入 <code>mpv:</code> 链接
 在 org 内插入视频. (但是,只是以文件链接的形式导出)
@@ -734,12 +700,12 @@ $0
 注意时间戳不分文件,只是跳转到对应时间.
 </p>
 </div>
-<div id="outline-container-org22bacb3" class="outline-5">
-<h5 id="org22bacb3">mpv</h5>
+<div id="outline-container-org9133ea1" class="outline-5">
+<h5 id="org9133ea1">mpv</h5>
 </div>
-<div id="outline-container-org530df3a" class="outline-5">
-<h5 id="org530df3a">开启会自动打开 mpv</h5>
-<div class="outline-text-5" id="text-org530df3a">
+<div id="outline-container-org7b0cc9d" class="outline-5">
+<h5 id="org7b0cc9d">开启会自动打开 mpv</h5>
+<div class="outline-text-5" id="text-org7b0cc9d">
 <p>
 通过在配置文件内加入:
 </p>
@@ -769,9 +735,9 @@ $0
 </div>
 
 
-<div id="outline-container-org25fe3ed" class="outline-4">
-<h4 id="org25fe3ed"><span class="section-number-4">1.0.12.</span> 配置 org 使用 prose-mode</h4>
-<div class="outline-text-4" id="text-1-0-12">
+<div id="outline-container-orgc412962" class="outline-4">
+<h4 id="orgc412962"><span class="section-number-4">1.1.12.</span> 配置 org 使用 prose-mode</h4>
+<div class="outline-text-4" id="text-1-1-12">
 <p>
 只需要 hook 到 <code>org-mode-hook</code> ,期间<a href="daily/2022-12-30.html#ID-4942307c-79ae-457d-9e8a-3acc4d516d32">修复 flyspell-mode 报错 <code>Can’t find Hunspell dictionary</code></a>
 <del>当打开时,不必要的 <code>writeroom-mode</code> 干扰了使用</del>.
@@ -785,9 +751,9 @@ $0
 </div>
 
 
-<div id="outline-container-org5e81eea" class="outline-4">
-<h4 id="org5e81eea"><span class="section-number-4">1.0.13.</span> 配置 org 任务管理颜色</h4>
-<div class="outline-text-4" id="text-1-0-13">
+<div id="outline-container-orgabcecc9" class="outline-4">
+<h4 id="orgabcecc9"><span class="section-number-4">1.1.13.</span> 配置 org 任务管理颜色</h4>
+<div class="outline-text-4" id="text-1-1-13">
 <ul class="org-ul">
 <li><p>
 默认配置
@@ -821,9 +787,9 @@ org-modern
 </div>
 
 
-<div id="outline-container-org67a7978" class="outline-4">
-<h4 id="org67a7978"><span class="section-number-4">1.0.14.</span> 配置 org-transclusion</h4>
-<div class="outline-text-4" id="text-1-0-14">
+<div id="outline-container-orgc7cf936" class="outline-4">
+<h4 id="orgc7cf936"><span class="section-number-4">1.1.14.</span> 配置 org-transclusion</h4>
+<div class="outline-text-4" id="text-1-1-14">
 <p>
 不做过多配置,只加入包 <code>require-package</code>
 </p>
@@ -831,13 +797,13 @@ org-modern
 </div>
 
 
-<div id="outline-container-org0be7eb7" class="outline-4">
-<h4 id="org0be7eb7"><span class="section-number-4">1.0.15.</span> 使用 org-transclusion</h4>
-<div class="outline-text-4" id="text-1-0-15">
+<div id="outline-container-org241d547" class="outline-4">
+<h4 id="org241d547"><span class="section-number-4">1.1.15.</span> 使用 org-transclusion</h4>
+<div class="outline-text-4" id="text-1-1-15">
 </div>
-<div id="outline-container-org83c929c" class="outline-5">
-<h5 id="org83c929c">链接头</h5>
-<div class="outline-text-5" id="text-org83c929c">
+<div id="outline-container-org7dea2a9" class="outline-5">
+<h5 id="org7dea2a9">链接头</h5>
+<div class="outline-text-5" id="text-org7dea2a9">
 <p>
 通过在链接前加入: <code>#+transclude:</code> 得到一个 transclude 链接.
 <code>:only-contents</code> 仅嵌入内容
@@ -849,9 +815,9 @@ org-modern
 </p>
 </div>
 </div>
-<div id="outline-container-org37a8462" class="outline-5">
-<h5 id="org37a8462">基本操作</h5>
-<div class="outline-text-5" id="text-org37a8462">
+<div id="outline-container-orgb8be6b9" class="outline-5">
+<h5 id="orgb8be6b9">基本操作</h5>
+<div class="outline-text-5" id="text-orgb8be6b9">
 <ul class="org-ul">
 <li><code>org-transclusion-mode</code> 自动应用到当前 buffer</li>
 <li><code>org-transclusion-add-all</code> 将所有 <code>#+transclude:</code> 链接转换为嵌入内容</li>
@@ -868,9 +834,9 @@ org-modern
 </div>
 
 
-<div id="outline-container-org83a0b9e" class="outline-4">
-<h4 id="org83a0b9e"><span class="section-number-4">1.0.16.</span> 转换 org-roam 链接为 org-transclude 嵌入块</h4>
-<div class="outline-text-4" id="text-1-0-16">
+<div id="outline-container-orgc7ffd68" class="outline-4">
+<h4 id="orgc7ffd68"><span class="section-number-4">1.1.16.</span> 转换 org-roam 链接为 org-transclude 嵌入块</h4>
+<div class="outline-text-4" id="text-1-1-16">
 <p>
 暂时不考虑递归,由于复制到 buffer 后仍是不可读字符.
 定义如下函数:
@@ -900,22 +866,22 @@ org-modern
 </div>
 
 
-<div id="outline-container-org258be05" class="outline-4">
-<h4 id="org258be05"><span class="section-number-4">1.0.17.</span> org-mode 中文表格显示优化</h4>
-<div class="outline-text-4" id="text-1-0-17">
+<div id="outline-container-org9931155" class="outline-4">
+<h4 id="org9931155"><span class="section-number-4">1.1.17.</span> org-mode 中文表格显示优化</h4>
+<div class="outline-text-4" id="text-1-1-17">
 <p>
 通过使用 <code>valign-mode</code> 自动对齐字体,暂时不加入 hook
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org4f5fd50" class="outline-2">
-<h2 id="org4f5fd50"><span class="section-number-2">2.</span> evil</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org478bae0" class="outline-3">
+<h3 id="org478bae0"><span class="section-number-3">1.2.</span> evil</h3>
+<div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-org43d08a3" class="outline-4">
-<h4 id="org43d08a3"><span class="section-number-4">2.0.1.</span> 配置evil jk 返回正常模式</h4>
-<div class="outline-text-4" id="text-2-0-1">
+<div id="outline-container-org076e87d" class="outline-4">
+<h4 id="org076e87d"><span class="section-number-4">1.2.1.</span> 配置evil jk 返回正常模式</h4>
+<div class="outline-text-4" id="text-1-2-1">
 <p>
 vi/ vim/ evil 自带快捷键: <b>C-[</b> . 
 可以从 <b>插入模式</b> 切换回 <b>正常模式</b> . 
@@ -933,17 +899,17 @@ vi/ vim/ evil 自带快捷键: <b>C-[</b> .
 可以用 evil-escape 插件实现. 
 </p>
 </div>
-<div id="outline-container-org3a5f4dd" class="outline-5">
-<h5 id="org3a5f4dd">安装 evil-escape</h5>
-<div class="outline-text-5" id="text-org3a5f4dd">
+<div id="outline-container-org8d15469" class="outline-5">
+<h5 id="org8d15469">安装 evil-escape</h5>
+<div class="outline-text-5" id="text-org8d15469">
 <pre class="example">
 M-x package-install RET evil-escape RET
 </pre>
 </div>
 </div>
-<div id="outline-container-orga15d614" class="outline-5">
-<h5 id="orga15d614">配置 evil-escape</h5>
-<div class="outline-text-5" id="text-orga15d614">
+<div id="outline-container-orgfa4b67a" class="outline-5">
+<h5 id="orgfa4b67a">配置 evil-escape</h5>
+<div class="outline-text-5" id="text-orgfa4b67a">
 <p>
 加入配置:
 </p>
@@ -960,9 +926,9 @@ M-x package-install RET evil-escape RET
 
 
 
-<div id="outline-container-orgb90f0e6" class="outline-4">
-<h4 id="orgb90f0e6"><span class="section-number-4">2.0.2.</span> 配置evil 正常模式下 org TAB</h4>
-<div class="outline-text-4" id="text-2-0-2">
+<div id="outline-container-orgc708744" class="outline-4">
+<h4 id="orgc708744"><span class="section-number-4">1.2.2.</span> 配置evil 正常模式下 org TAB</h4>
+<div class="outline-text-4" id="text-1-2-2">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #969896; font-style: italic;">;;; </span><span style="color: #969896; font-style: italic;">&#37197;&#32622;org-mode &#19979;&#27491;&#24120;&#27169;&#24335;&#30340; tab &#20999;&#25442;</span>
 <span style="color: #eaeaea;">(</span>define-key evil-normal-state-map <span style="color: #70c0b1;">(</span>kbd <span style="color: #70c0b1;">"&lt;tab&gt;"</span><span style="color: #70c0b1;">)</span> <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">org-cycle</span><span style="color: #eaeaea;">)</span>
@@ -972,9 +938,9 @@ M-x package-install RET evil-escape RET
 </div>
 
 
-<div id="outline-container-orga09dd8f" class="outline-4">
-<h4 id="orga09dd8f"><span class="section-number-4">2.0.3.</span> 配置 evil 插入模式快捷键</h4>
-<div class="outline-text-4" id="text-2-0-3">
+<div id="outline-container-orgcbb24ba" class="outline-4">
+<h4 id="orgcbb24ba"><span class="section-number-4">1.2.3.</span> 配置 evil 插入模式快捷键</h4>
+<div class="outline-text-4" id="text-1-2-3">
 <p>
 参照论坛大佬配置:
 参考链接: <a href="https://emacs-china.org/t/topic/5241/7?u=xiliuya">evil 键绑定调整</a>
@@ -1003,9 +969,9 @@ M-x package-install RET evil-escape RET
 </div>
 
 
-<div id="outline-container-org2061110" class="outline-4">
-<h4 id="org2061110"><span class="section-number-4">2.0.4.</span> 配置 evil-ex 自定义 cmd</h4>
-<div class="outline-text-4" id="text-2-0-4">
+<div id="outline-container-org2456588" class="outline-4">
+<h4 id="org2456588"><span class="section-number-4">1.2.4.</span> 配置 evil-ex 自定义 cmd</h4>
+<div class="outline-text-4" id="text-1-2-4">
 <p>
 可以通过 evil-ex 定义一个在命令模式下执行的命令:
 </p>
@@ -1021,13 +987,13 @@ M-x package-install RET evil-escape RET
 </div>
 </div>
 </div>
-<div id="outline-container-org936cdd3" class="outline-2">
-<h2 id="org936cdd3"><span class="section-number-2">3.</span> auto-insert</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-orgce90de3" class="outline-3">
+<h3 id="orgce90de3"><span class="section-number-3">1.3.</span> auto-insert</h3>
+<div class="outline-text-3" id="text-1-3">
 </div>
-<div id="outline-container-org78f130b" class="outline-4">
-<h4 id="org78f130b"><span class="section-number-4">3.0.1.</span> 配置auto-insert模板</h4>
-<div class="outline-text-4" id="text-3-0-1">
+<div id="outline-container-orgee61b0f" class="outline-4">
+<h4 id="orgee61b0f"><span class="section-number-4">1.3.1.</span> 配置auto-insert模板</h4>
+<div class="outline-text-4" id="text-1-3-1">
 <p>
 参考链接: <a href="https://github.com/lujun9972/emacs-document/blob/master/emacs-common/%E8%AE%A9Emacs%E4%B8%BA%E4%BD%A0%E8%87%AA%E5%8A%A8%E6%8F%92%E5%85%A5%E5%86%85%E5%AE%B9(Emacs%E6%A8%A1%E6%9D%BF%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97).org">Emacs 模板</a>
 经过对比发现emacswiki 较为清晰易于使用
@@ -1092,9 +1058,9 @@ M-x package-install RET evil-escape RET
 
 
 
-<div id="outline-container-org915dab5" class="outline-4">
-<h4 id="org915dab5"><span class="section-number-4">3.0.2.</span> 优化 auto-insert</h4>
-<div class="outline-text-4" id="text-3-0-2">
+<div id="outline-container-org8bdd638" class="outline-4">
+<h4 id="org8bdd638"><span class="section-number-4">1.3.2.</span> 优化 auto-insert</h4>
+<div class="outline-text-4" id="text-1-3-2">
 <p>
 由于自动插入的 email 地址不正确.通过以下加入设置:
 </p>
@@ -1105,22 +1071,22 @@ M-x package-install RET evil-escape RET
 </div>
 </div>
 </div>
-<div id="outline-container-orgb2f351b" class="outline-2">
-<h2 id="orgb2f351b"><span class="section-number-2">4.</span> yasnippet</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org5791af1" class="outline-3">
+<h3 id="org5791af1"><span class="section-number-3">1.4.</span> yasnippet</h3>
+<div class="outline-text-3" id="text-1-4">
 </div>
-<div id="outline-container-orgebe0f39" class="outline-4">
-<h4 id="orgebe0f39"><span class="section-number-4">4.0.1.</span> 配置yasnippet</h4>
-<div class="outline-text-4" id="text-4-0-1">
+<div id="outline-container-org2f11502" class="outline-4">
+<h4 id="org2f11502"><span class="section-number-4">1.4.1.</span> 配置yasnippet</h4>
+<div class="outline-text-4" id="text-1-4-1">
 <p>
 yasnippt 是一个代码模板系统. 
 可以和eglot 配合使用. 
 配置好可以极大加快代码速度. 
 </p>
 </div>
-<div id="outline-container-org5e108e5" class="outline-5">
-<h5 id="org5e108e5">配置文件</h5>
-<div class="outline-text-5" id="text-org5e108e5">
+<div id="outline-container-org5adb0e8" class="outline-5">
+<h5 id="org5adb0e8">配置文件</h5>
+<div class="outline-text-5" id="text-org5adb0e8">
 <p>
 可以参考链接: <a href="https://github.com/joaotavora/eglot">eglot github</a> . 
 在init-local.el 加入:
@@ -1133,15 +1099,15 @@ yasnippt 是一个代码模板系统.
 </div>
 </div>
 </div>
-<div id="outline-container-org2fcc1d8" class="outline-5">
-<h5 id="org2fcc1d8">新建一个模板.</h5>
-<div class="outline-text-5" id="text-org2fcc1d8">
+<div id="outline-container-orgb1ca670" class="outline-5">
+<h5 id="orgb1ca670">新建一个模板.</h5>
+<div class="outline-text-5" id="text-orgb1ca670">
 <p>
 通过 <b>M-x yas-new-snippet</b>
 例如在 c-mode 中建立了一个: 输入name 字符串后使用TAB 会变成It's xiliuya 的模板
 (仅限于输入非代码时)
 </p>
-<pre class="example" id="org93d891d">
+<pre class="example" id="orgefc000f">
 # -*- mode: snippet -*-
 # name:name
 # key:name
@@ -1150,9 +1116,9 @@ It's xiliuya
 </pre>
 </div>
 </div>
-<div id="outline-container-orgda45dd1" class="outline-5">
-<h5 id="orgda45dd1">复制模板</h5>
-<div class="outline-text-5" id="text-orgda45dd1">
+<div id="outline-container-org847420a" class="outline-5">
+<h5 id="org847420a">复制模板</h5>
+<div class="outline-text-5" id="text-org847420a">
 <p>
 将 github 上的模板文件夹: <b>snippets</b> 复制到 <b>~/.emacs.d/snippets/</b> . 
 模板链接 : <a href="https://github.com/yun63/emacs.d.git">yun63</a>
@@ -1162,9 +1128,9 @@ It's xiliuya
 </div>
 
 
-<div id="outline-container-org7a1056a" class="outline-4">
-<h4 id="org7a1056a"><span class="section-number-4">4.0.2.</span> yas 快捷添加 org-src 代码块</h4>
-<div class="outline-text-4" id="text-4-0-2">
+<div id="outline-container-org2d9acb5" class="outline-4">
+<h4 id="org2d9acb5"><span class="section-number-4">1.4.2.</span> yas 快捷添加 org-src 代码块</h4>
+<div class="outline-text-4" id="text-1-4-2">
 <p>
 使用 <code>C-c &amp; C-n</code> 定义一个新的快捷插入片段
 </p>
@@ -1178,9 +1144,9 @@ It's xiliuya
 </div>
 
 
-<div id="outline-container-org676d170" class="outline-4">
-<h4 id="org676d170"><span class="section-number-4">4.0.3.</span> 调整 yasnippet 模板</h4>
-<div class="outline-text-4" id="text-4-0-3">
+<div id="outline-container-orgde7d3a2" class="outline-4">
+<h4 id="orgde7d3a2"><span class="section-number-4">1.4.3.</span> 调整 yasnippet 模板</h4>
+<div class="outline-text-4" id="text-1-4-3">
 <p>
 删除 <code>yasnippet-snippets</code> 包已有的模板
 保留自定义的几个有用的模板
@@ -1189,9 +1155,9 @@ It's xiliuya
 </div>
 
 
-<div id="outline-container-org5c25e8c" class="outline-4">
-<h4 id="org5c25e8c"><span class="section-number-4">4.0.4.</span> 修复 prog-mode 下 yas 功能</h4>
-<div class="outline-text-4" id="text-4-0-4">
+<div id="outline-container-orgad67e9e" class="outline-4">
+<h4 id="orgad67e9e"><span class="section-number-4">1.4.4.</span> 修复 prog-mode 下 yas 功能</h4>
+<div class="outline-text-4" id="text-1-4-4">
 <p>
 由于在沙盒内测试并无异常
 经过逐个关闭 minor mode 测试后
@@ -1206,9 +1172,9 @@ Symbol-Overlay minor mode
 已经向 <code>symbol-overlay</code> 提交 <a href="https://github.com/wolray/symbol-overlay/issues/92">issues</a>
 </p>
 </div>
-<div id="outline-container-org400443c" class="outline-5">
-<h5 id="org400443c">解决方案</h5>
-<div class="outline-text-5" id="text-org400443c">
+<div id="outline-container-org7f821fe" class="outline-5">
+<h5 id="org7f821fe">解决方案</h5>
+<div class="outline-text-5" id="text-org7f821fe">
 <p>
 通过修改 <code>prog-mode-hook</code>
 </p>
@@ -1220,13 +1186,13 @@ Symbol-Overlay minor mode
 </div>
 </div>
 </div>
-<div id="outline-container-org0415212" class="outline-2">
-<h2 id="org0415212"><span class="section-number-2">5.</span> eglot</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org2317b00" class="outline-3">
+<h3 id="org2317b00"><span class="section-number-3">1.5.</span> eglot</h3>
+<div class="outline-text-3" id="text-1-5">
 </div>
-<div id="outline-container-org71b8a3e" class="outline-4">
-<h4 id="org71b8a3e"><span class="section-number-4">5.0.1.</span> 将 eglot 加入配置使其打开c文件后启动</h4>
-<div class="outline-text-4" id="text-5-0-1">
+<div id="outline-container-org7d5d2be" class="outline-4">
+<h4 id="org7d5d2be"><span class="section-number-4">1.5.1.</span> 将 eglot 加入配置使其打开c文件后启动</h4>
+<div class="outline-text-4" id="text-1-5-1">
 <p>
 已加入init-local.el
 使用 <b>(add-hook 'prog-mode-hook 'eglot-ensure)</b>
@@ -1236,9 +1202,9 @@ Symbol-Overlay minor mode
 </div>
 
 
-<div id="outline-container-org069e2cf" class="outline-4">
-<h4 id="org069e2cf"><span class="section-number-4">5.0.2.</span> 查看使用eglot</h4>
-<div class="outline-text-4" id="text-5-0-2">
+<div id="outline-container-org9c1f415" class="outline-4">
+<h4 id="org9c1f415"><span class="section-number-4">1.5.2.</span> 查看使用eglot</h4>
+<div class="outline-text-4" id="text-1-5-2">
 <p>
 通过阅读文档
 官方readme:<a href="https://github.com/joaotavora/eglot"> eglot</a>
@@ -1250,9 +1216,9 @@ Symbol-Overlay minor mode
 </div>
 
 
-<div id="outline-container-orgde9e6c4" class="outline-4">
-<h4 id="orgde9e6c4"><span class="section-number-4">5.0.3.</span> 重新配置eglot</h4>
-<div class="outline-text-4" id="text-5-0-3">
+<div id="outline-container-org89c3f75" class="outline-4">
+<h4 id="org89c3f75"><span class="section-number-4">1.5.3.</span> 重新配置eglot</h4>
+<div class="outline-text-4" id="text-1-5-3">
 <p>
 删除旧配置
 </p>
@@ -1275,9 +1241,9 @@ eglot 依赖外部的lsp server,
 
 
 
-<div id="outline-container-org0ca1c63" class="outline-4">
-<h4 id="org0ca1c63"><span class="section-number-4">5.0.4.</span> 当打开el 文件后eglot 报错</h4>
-<div class="outline-text-4" id="text-5-0-4">
+<div id="outline-container-org8a58975" class="outline-4">
+<h4 id="org8a58975"><span class="section-number-4">1.5.4.</span> 当打开el 文件后eglot 报错</h4>
+<div class="outline-text-4" id="text-1-5-4">
 <p>
 放弃原先的pr 因为使用时会不生效 原因不明
 直接使用add-hook 时 打开el 报错
@@ -1290,9 +1256,9 @@ el 环境已足够完善, 不需要eglot.
 
 
 
-<div id="outline-container-orgbbecdee" class="outline-4">
-<h4 id="orgbbecdee"><span class="section-number-4">5.0.5.</span> 配置 eglot 快捷键</h4>
-<div class="outline-text-4" id="text-5-0-5">
+<div id="outline-container-orga2022a1" class="outline-4">
+<h4 id="orga2022a1"><span class="section-number-4">1.5.5.</span> 配置 eglot 快捷键</h4>
+<div class="outline-text-4" id="text-1-5-5">
 <p>
 参考链接:<a href="https://whatacold.io/blog/2022-01-22-emacs-eglot-lsp/">Eglot for Better Programming</a>
 根据参考的链接结合已有配置
@@ -1313,13 +1279,13 @@ el 环境已足够完善, 不需要eglot.
 </div>
 </div>
 </div>
-<div id="outline-container-orga0e984d" class="outline-2">
-<h2 id="orga0e984d"><span class="section-number-2">6.</span> erc</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-orgfd3a012" class="outline-3">
+<h3 id="orgfd3a012"><span class="section-number-3">1.6.</span> erc</h3>
+<div class="outline-text-3" id="text-1-6">
 </div>
-<div id="outline-container-org45c4634" class="outline-4">
-<h4 id="org45c4634"><span class="section-number-4">6.0.1.</span> 配置 erc 使用</h4>
-<div class="outline-text-4" id="text-6-0-1">
+<div id="outline-container-org71e21c3" class="outline-4">
+<h4 id="org71e21c3"><span class="section-number-4">1.6.1.</span> 配置 erc 使用</h4>
+<div class="outline-text-4" id="text-1-6-1">
 <p>
 经过多次的粗心大意 终于按照 <a href="https://libera.chat/guides/emacs-erc">官方方案</a> 成功连到irc <del>但是好像不能正常查看消息</del> 是我太浮躁了
 根据官网的教程 <code>erc-sasl</code> 下载文件并在 <code>init-local.el</code> 加入以下内容:
@@ -1364,17 +1330,17 @@ el 环境已足够完善, 不需要eglot.
 </div>
 </div>
 </div>
-<div id="outline-container-org0aa67ec" class="outline-2">
-<h2 id="org0aa67ec"><span class="section-number-2">7.</span> sdcv</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-orgabc3072" class="outline-3">
+<h3 id="orgabc3072"><span class="section-number-3">1.7.</span> sdcv</h3>
+<div class="outline-text-3" id="text-1-7">
 </div>
-<div id="outline-container-orga6a5c1d" class="outline-4">
-<h4 id="orga6a5c1d"><span class="section-number-4">7.0.1.</span> 配置 espeak 朗读</h4>
-<div class="outline-text-4" id="text-7-0-1">
+<div id="outline-container-org4458146" class="outline-4">
+<h4 id="org4458146"><span class="section-number-4">1.7.1.</span> 配置 espeak 朗读</h4>
+<div class="outline-text-4" id="text-1-7-1">
 </div>
-<div id="outline-container-orgf0ddb91" class="outline-5">
-<h5 id="orgf0ddb91">修改配置</h5>
-<div class="outline-text-5" id="text-orgf0ddb91">
+<div id="outline-container-orgbd52f1a" class="outline-5">
+<h5 id="orgbd52f1a">修改配置</h5>
+<div class="outline-text-5" id="text-orgbd52f1a">
 <p>
 在 init-local.el 加入如下配置:
 </p>
@@ -1426,9 +1392,9 @@ el 环境已足够完善, 不需要eglot.
 </div>
 </div>
 </div>
-<div id="outline-container-org46d3b3c" class="outline-5">
-<h5 id="org46d3b3c">实际分析</h5>
-<div class="outline-text-5" id="text-org46d3b3c">
+<div id="outline-container-orgafbb397" class="outline-5">
+<h5 id="orgafbb397">实际分析</h5>
+<div class="outline-text-5" id="text-orgafbb397">
 <p>
 由于 <code>sleep-for</code> 函数的未知原因导致, 使用 <code>sit-for</code> 可以解决
 建议多看一些备注信息, 有时可以快速排查问题
@@ -1437,13 +1403,13 @@ el 环境已足够完善, 不需要eglot.
 </div>
 </div>
 </div>
-<div id="outline-container-orge18c0de" class="outline-2">
-<h2 id="orge18c0de"><span class="section-number-2">8.</span> pyim</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-orgaeff2e1" class="outline-3">
+<h3 id="orgaeff2e1"><span class="section-number-3">1.8.</span> pyim</h3>
+<div class="outline-text-3" id="text-1-8">
 </div>
-<div id="outline-container-org63baaa4" class="outline-4">
-<h4 id="org63baaa4"><span class="section-number-4">8.0.1.</span> 使用pyim 并体验</h4>
-<div class="outline-text-4" id="text-8-0-1">
+<div id="outline-container-org610008b" class="outline-4">
+<h4 id="org610008b"><span class="section-number-4">1.8.1.</span> 使用pyim 并体验</h4>
+<div class="outline-text-4" id="text-1-8-1">
 <p>
 成功使用 并正常的输入汉字
 可在终端运行正常
@@ -1455,9 +1421,9 @@ el 环境已足够完善, 不需要eglot.
 </div>
 
 
-<div id="outline-container-orgda1db11" class="outline-4">
-<h4 id="orgda1db11"><span class="section-number-4">8.0.2.</span> 修改 pyim 的选词框</h4>
-<div class="outline-text-4" id="text-8-0-2">
+<div id="outline-container-org9799915" class="outline-4">
+<h4 id="org9799915"><span class="section-number-4">1.8.2.</span> 修改 pyim 的选词框</h4>
+<div class="outline-text-4" id="text-1-8-2">
 <p>
 使用默认值就可以只需要安装 posframe 包.
 配置加入
@@ -1470,22 +1436,22 @@ el 环境已足够完善, 不需要eglot.
 </div>
 
 
-<div id="outline-container-orgd332431" class="outline-4">
-<h4 id="orgd332431"><span class="section-number-4">8.0.3.</span> 修复 pyim 在 prog-mode 下的bug</h4>
-<div class="outline-text-4" id="text-8-0-3">
+<div id="outline-container-org1b35bdc" class="outline-4">
+<h4 id="org1b35bdc"><span class="section-number-4">1.8.3.</span> 修复 pyim 在 prog-mode 下的bug</h4>
+<div class="outline-text-4" id="text-1-8-3">
 <p>
 经过测试禁用了 <code>symbol-overlay</code> 后不再出现输入框消失和输入字符出现问题了.
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb114bb0" class="outline-2">
-<h2 id="orgb114bb0"><span class="section-number-2">9.</span> EAF</h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-org7658174" class="outline-3">
+<h3 id="org7658174"><span class="section-number-3">1.9.</span> EAF</h3>
+<div class="outline-text-3" id="text-1-9">
 </div>
-<div id="outline-container-orga32477d" class="outline-4">
-<h4 id="orga32477d"><span class="section-number-4">9.0.1.</span> CANCELED 尝试使用 EAF</h4>
-<div class="outline-text-4" id="text-9-0-1">
+<div id="outline-container-orgd06d8d1" class="outline-4">
+<h4 id="orgd06d8d1"><span class="section-number-4">1.9.1.</span> CANCELED 尝试使用 EAF</h4>
+<div class="outline-text-4" id="text-1-9-1">
 <p>
 经过测试没有预期的美好与简洁, 由于wayland 支持不好已经放弃使用.
 </p>
@@ -1500,25 +1466,25 @@ el 环境已足够完善, 不需要eglot.
 </div>
 </div>
 </div>
-<div id="outline-container-orga35bddf" class="outline-2">
-<h2 id="orga35bddf"><span class="section-number-2">10.</span> 优化</h2>
-<div class="outline-text-2" id="text-10">
+<div id="outline-container-org7c57baa" class="outline-3">
+<h3 id="org7c57baa"><span class="section-number-3">1.10.</span> 优化</h3>
+<div class="outline-text-3" id="text-1-10">
 </div>
-<div id="outline-container-orgdbdf719" class="outline-4">
-<h4 id="orgdbdf719"><span class="section-number-4">10.0.1.</span> CANCELED 优化 emacs 启动时间</h4>
-<div class="outline-text-4" id="text-10-0-1">
+<div id="outline-container-org51e7431" class="outline-4">
+<h4 id="org51e7431"><span class="section-number-4">1.10.1.</span> CANCELED 优化 emacs 启动时间</h4>
+<div class="outline-text-4" id="text-1-10-1">
 </div>
-<div id="outline-container-org349c2e7" class="outline-5">
-<h5 id="org349c2e7">查看 <code>benchmarking</code> 信息</h5>
-<div class="outline-text-5" id="text-org349c2e7">
+<div id="outline-container-org3afde77" class="outline-5">
+<h5 id="org3afde77">查看 <code>benchmarking</code> 信息</h5>
+<div class="outline-text-5" id="text-org3afde77">
 <p>
 通过 <code>M-x sanityinc/require-time</code> 查看启动时间详情
 </p>
 </div>
 </div>
-<div id="outline-container-orgdedf9d8" class="outline-5">
-<h5 id="orgdedf9d8">问题</h5>
-<div class="outline-text-5" id="text-orgdedf9d8">
+<div id="outline-container-orgaae0346" class="outline-5">
+<h5 id="orgaae0346">问题</h5>
+<div class="outline-text-5" id="text-orgaae0346">
 <p>
 问题主要在 <code>org-mode</code> 暂时没有较好的解决方案
 按照时间排序输出如下:
@@ -1587,13 +1553,13 @@ el 环境已足够完善, 不需要eglot.
 </div>
 </div>
 
-<div id="outline-container-org0b98e97" class="outline-5">
-<h5 id="org0b98e97">优化</h5>
-<div class="outline-text-5" id="text-org0b98e97">
+<div id="outline-container-orgce72347" class="outline-5">
+<h5 id="orgce72347">优化</h5>
+<div class="outline-text-5" id="text-orgce72347">
 </div>
 <ul class="org-ul">
-<li><a id="org5015a4c"></a>init-elpa<br />
-<div class="outline-text-6" id="text-org5015a4c">
+<li><a id="org13fb35f"></a>init-elpa<br />
+<div class="outline-text-6" id="text-org13fb35f">
 <p>
 修改镜像源配置内容:
 </p>
@@ -1611,9 +1577,9 @@ el 环境已足够完善, 不需要eglot.
 
 
 
-<div id="outline-container-org8060b56" class="outline-4">
-<h4 id="org8060b56"><span class="section-number-4">10.0.2.</span> 配置 emacs 窗口录制 GIF</h4>
-<div class="outline-text-4" id="text-10-0-2">
+<div id="outline-container-org904270d" class="outline-4">
+<h4 id="org904270d"><span class="section-number-4">1.10.2.</span> 配置 emacs 窗口录制 GIF</h4>
+<div class="outline-text-4" id="text-1-10-2">
 <p>
 修改相关项目 el <a href="https://github.com/Ambrevar/emacs-gif-screencast">gif-screen</a>
 修改后的代码: <a href="https://github.com/xiliuya/emacs.d/blob/my-dotfile/lisp/gif-screencast.el">gif-screen-wayland</a>
@@ -1630,9 +1596,9 @@ el 环境已足够完善, 不需要eglot.
 文件自动保存到 <code>~/Videos/emacs/</code> 目录下
 </p>
 </div>
-<div id="outline-container-org6c629b7" class="outline-5">
-<h5 id="org6c629b7">添加 shell 脚本</h5>
-<div class="outline-text-5" id="text-org6c629b7">
+<div id="outline-container-orgde34049" class="outline-5">
+<h5 id="orgde34049">添加 shell 脚本</h5>
+<div class="outline-text-5" id="text-orgde34049">
 <div class="org-src-container">
 <pre class="src src-shell">swaymsg -t get_tree | jq -j <span style="color: #70c0b1;">'.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"'</span>
 </pre>
@@ -1657,9 +1623,9 @@ el 环境已足够完善, 不需要eglot.
 </div>
 </div>
 </div>
-<div id="outline-container-org0d484bb" class="outline-5">
-<h5 id="org0d484bb">配置快捷键</h5>
-<div class="outline-text-5" id="text-org0d484bb">
+<div id="outline-container-orge6d784b" class="outline-5">
+<h5 id="orge6d784b">配置快捷键</h5>
+<div class="outline-text-5" id="text-orge6d784b">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #969896; font-style: italic;">;;; </span><span style="color: #969896; font-style: italic;">&#37197;&#32622; gif &#25130;&#22270;</span>
 <span style="color: #eaeaea;">(</span><span style="color: #b9ca4a;">require</span> <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">gif-screencast</span><span style="color: #eaeaea;">)</span>
@@ -1675,9 +1641,9 @@ el 环境已足够完善, 不需要eglot.
 </div>
 
 
-<div id="outline-container-orgc4adb12" class="outline-4">
-<h4 id="orgc4adb12"><span class="section-number-4">10.0.3.</span> 尝试其他 gif 方案</h4>
-<div class="outline-text-4" id="text-10-0-3">
+<div id="outline-container-orge13a553" class="outline-4">
+<h4 id="orge13a553"><span class="section-number-4">1.10.3.</span> 尝试其他 gif 方案</h4>
+<div class="outline-text-4" id="text-1-10-3">
 <p>
 我想我 <del>鬼迷心窍了</del> 竟然执着于用复杂的方法实现简单的功能
 感觉到了讽刺, 不过我也得到了一个,用不同的方式去实现另一件事情的方法.
@@ -1698,9 +1664,9 @@ el 环境已足够完善, 不需要eglot.
 旧的方式 : <a href="daily/2022-12-20.html#ID-f3a6b17a-7297-419e-8af7-346ddc109609">配置 emacs 窗口录制 GIF</a>
 </p>
 </div>
-<div id="outline-container-org93dd82c" class="outline-5">
-<h5 id="org93dd82c">使用截图脚本截取</h5>
-<div class="outline-text-5" id="text-org93dd82c">
+<div id="outline-container-org0484a0f" class="outline-5">
+<h5 id="org0484a0f">使用截图脚本截取</h5>
+<div class="outline-text-5" id="text-org0484a0f">
 <p>
 由于并不好用用作参考不做研究.
 </p>
@@ -1719,9 +1685,9 @@ el 环境已足够完善, 不需要eglot.
 </div>
 </div>
 </div>
-<div id="outline-container-orgd8c166e" class="outline-5">
-<h5 id="orgd8c166e">使用录制屏幕截取</h5>
-<div class="outline-text-5" id="text-orgd8c166e">
+<div id="outline-container-org3bd2d7f" class="outline-5">
+<h5 id="org3bd2d7f">使用录制屏幕截取</h5>
+<div class="outline-text-5" id="text-org3bd2d7f">
 <p>
 经过了实验生成的文件会很大,不太建议使用
 启动录制:
@@ -1761,14 +1727,14 @@ ln -s /home/xiliuya/myday/daily/recorder_stop.sh ~/.local/bin/gif_stop
 
 
 
-<div id="outline-container-org2fd7132" class="outline-4">
-<h4 id="org2fd7132"><span class="section-number-4">10.0.4.</span> 配置 编译命令</h4>
-<div class="outline-text-4" id="text-10-0-4">
+<div id="outline-container-orga22eb07" class="outline-4">
+<h4 id="orga22eb07"><span class="section-number-4">1.10.4.</span> 配置 编译命令</h4>
+<div class="outline-text-4" id="text-1-10-4">
 </div>
 
-<div id="outline-container-org1852834" class="outline-5">
-<h5 id="org1852834">配置编译成功后,隐藏弹窗:</h5>
-<div class="outline-text-5" id="text-org1852834">
+<div id="outline-container-org0cd499b" class="outline-5">
+<h5 id="org0cd499b">配置编译成功后,隐藏弹窗:</h5>
+<div class="outline-text-5" id="text-org0cd499b">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #969896; font-style: italic;">;;; </span><span style="color: #969896; font-style: italic;">&#37197;&#32622;&#32534;&#35793;&#25104;&#21151;&#21518;,&#38544;&#34255;&#24377;&#31383;</span>
 <span style="color: #eaeaea;">(</span><span style="color: #b9ca4a;">defun</span> <span style="color: #e78c45;">notify-compilation-result</span><span style="color: #70c0b1;">(</span>buffer msg<span style="color: #70c0b1;">)</span>
@@ -1807,9 +1773,9 @@ ln -s /home/xiliuya/myday/daily/recorder_stop.sh ~/.local/bin/gif_stop
 </div>
 </div>
 
-<div id="outline-container-org1c7220c" class="outline-5">
-<h5 id="org1c7220c">配置 c-mode 编译命令</h5>
-<div class="outline-text-5" id="text-org1c7220c">
+<div id="outline-container-org0c152b3" class="outline-5">
+<h5 id="org0c152b3">配置 c-mode 编译命令</h5>
+<div class="outline-text-5" id="text-org0c152b3">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #969896; font-style: italic;">;;; </span><span style="color: #969896; font-style: italic;">&#37197;&#32622; c-mode &#32534;&#35793;&#21629;&#20196;</span>
 <span style="color: #eaeaea;">(</span>add-hook <span style="color: #b9ca4a;">'</span><span style="color: #7aa6da;">c-mode-hook</span>
@@ -1835,9 +1801,9 @@ ln -s /home/xiliuya/myday/daily/recorder_stop.sh ~/.local/bin/gif_stop
 </div>
 
 
-<div id="outline-container-orgc79fea4" class="outline-4">
-<h4 id="orgc79fea4"><span class="section-number-4">10.0.5.</span> 将 buffer 内容复制到缓存buffer内</h4>
-<div class="outline-text-4" id="text-10-0-5">
+<div id="outline-container-org6e7218c" class="outline-4">
+<h4 id="org6e7218c"><span class="section-number-4">1.10.5.</span> 将 buffer 内容复制到缓存buffer内</h4>
+<div class="outline-text-4" id="text-1-10-5">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #eaeaea;">(</span><span style="color: #b9ca4a;">defun</span> <span style="color: #e78c45;">my-copy-buffer</span> <span style="color: #70c0b1;">()</span>
   <span style="color: #70c0b1;">(</span><span style="color: #b9ca4a;">interactive</span><span style="color: #70c0b1;">)</span>
@@ -1849,13 +1815,13 @@ ln -s /home/xiliuya/myday/daily/recorder_stop.sh ~/.local/bin/gif_stop
 </div>
 </div>
 </div>
-<div id="outline-container-orgd3cfe2f" class="outline-2">
-<h2 id="orgd3cfe2f"><span class="section-number-2">11.</span> 修复</h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-org2ce56cb" class="outline-3">
+<h3 id="org2ce56cb"><span class="section-number-3">1.11.</span> 修复</h3>
+<div class="outline-text-3" id="text-1-11">
 </div>
-<div id="outline-container-org49e47af" class="outline-4">
-<h4 id="org49e47af"><span class="section-number-4">11.0.1.</span> 修复 flyspell-mode 报错 Can’t find Hunspell dictionary</h4>
-<div class="outline-text-4" id="text-11-0-1">
+<div id="outline-container-org0a324ce" class="outline-4">
+<h4 id="org0a324ce"><span class="section-number-4">1.11.1.</span> 修复 flyspell-mode 报错 Can’t find Hunspell dictionary</h4>
+<div class="outline-text-4" id="text-1-11-1">
 <p>
 安装 <code>ispell</code> 即可
 由于 <code>hunspell</code> 较为麻烦暂时不考虑使用
@@ -1865,9 +1831,9 @@ ln -s /home/xiliuya/myday/daily/recorder_stop.sh ~/.local/bin/gif_stop
 
 
 
-<div id="outline-container-orgbf7b671" class="outline-4">
-<h4 id="orgbf7b671"><span class="section-number-4">11.0.2.</span> 修复 org 模式下的代码执行</h4>
-<div class="outline-text-4" id="text-11-0-2">
+<div id="outline-container-org2bc2623" class="outline-4">
+<h4 id="org2bc2623"><span class="section-number-4">1.11.2.</span> 修复 org 模式下的代码执行</h4>
+<div class="outline-text-4" id="text-1-11-2">
 <p>
 purcell 解决了该问题
 </p>
@@ -1875,9 +1841,9 @@ purcell 解决了该问题
 </div>
 
 
-<div id="outline-container-org550eb7e" class="outline-4">
-<h4 id="org550eb7e"><span class="section-number-4">11.0.3.</span> 修复 org-mode 以外的 evil-tab</h4>
-<div class="outline-text-4" id="text-11-0-3">
+<div id="outline-container-org12ec72f" class="outline-4">
+<h4 id="org12ec72f"><span class="section-number-4">1.11.3.</span> 修复 org-mode 以外的 evil-tab</h4>
+<div class="outline-text-4" id="text-1-11-3">
 <p>
 由于上次的配置干扰了其他的模式下 evil tab 的使用(如编辑代码时多按了一个 tab)
 <a href="daily/221202.html#ID-9ea9d1ae-b443-4259-af78-ae86bda9d5bc">配置evil 正常模式下 org TAB</a>
@@ -1908,9 +1874,9 @@ purcell 解决了该问题
 </div>
 
 
-<div id="outline-container-orgcb5527d" class="outline-4">
-<h4 id="orgcb5527d"><span class="section-number-4">11.0.4.</span> 修复 prog-mode 下 yas 功能</h4>
-<div class="outline-text-4" id="text-11-0-4">
+<div id="outline-container-org8cdabdf" class="outline-4">
+<h4 id="org8cdabdf"><span class="section-number-4">1.11.4.</span> 修复 prog-mode 下 yas 功能</h4>
+<div class="outline-text-4" id="text-1-11-4">
 <p>
 由于在沙盒内测试并无异常
 经过逐个关闭 minor mode 测试后
@@ -1925,9 +1891,9 @@ Symbol-Overlay minor mode
 已经向 <code>symbol-overlay</code> 提交 <a href="https://github.com/wolray/symbol-overlay/issues/92">issues</a>
 </p>
 </div>
-<div id="outline-container-orgc2f59d0" class="outline-5">
-<h5 id="orgc2f59d0">解决方案</h5>
-<div class="outline-text-5" id="text-orgc2f59d0">
+<div id="outline-container-org835894b" class="outline-5">
+<h5 id="org835894b">解决方案</h5>
+<div class="outline-text-5" id="text-org835894b">
 <p>
 通过修改 <code>prog-mode-hook</code>
 </p>
@@ -1940,9 +1906,9 @@ Symbol-Overlay minor mode
 </div>
 
 
-<div id="outline-container-orgb4324a8" class="outline-4">
-<h4 id="orgb4324a8"><span class="section-number-4">11.0.5.</span> 修复 org-transclusion 报错 No content found with "id:</h4>
-<div class="outline-text-4" id="text-11-0-5">
+<div id="outline-container-org4b99cff" class="outline-4">
+<h4 id="org4b99cff"><span class="section-number-4">1.11.5.</span> 修复 org-transclusion 报错 No content found with "id:</h4>
+<div class="outline-text-4" id="text-1-11-5">
 <p>
 参考: <a href="https://github.com/nobiot/org-transclusion/issues/138">issues/138</a> .
 通过执行 <code>M-x org-roam-update-org-id-locations</code> 更新 roam 就能正常使用.
@@ -1951,9 +1917,9 @@ Symbol-Overlay minor mode
 </div>
 
 
-<div id="outline-container-org044b8e2" class="outline-4">
-<h4 id="org044b8e2"><span class="section-number-4">11.0.6.</span> 修复 pyim 在 prog-mode 下的bug</h4>
-<div class="outline-text-4" id="text-11-0-6">
+<div id="outline-container-orgcb6e6cb" class="outline-4">
+<h4 id="orgcb6e6cb"><span class="section-number-4">1.11.6.</span> 修复 pyim 在 prog-mode 下的bug</h4>
+<div class="outline-text-4" id="text-1-11-6">
 <p>
 经过测试禁用了 <code>symbol-overlay</code> 后不再出现输入框消失和输入字符出现问题了.
 </p>
@@ -1961,9 +1927,10 @@ Symbol-Overlay minor mode
 </div>
 </div>
 </div>
+</div>
 <div id="postamble" class="status">
 <p class="author">&#20316;&#32773;: <a href="https://xiliuya.github.io/">xiliuya</a></p>
-<p class="date">Created: 2023-01-02 一 20:39</p>
+<p class="date">Created: 2023-01-02 一 22:43</p>
 </div>
 </body>
 </html>
